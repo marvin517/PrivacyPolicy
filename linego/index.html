@@ -1,112 +1,428 @@
-<h1>隐私政策</h1>
-<div>更新日期：<strong>2025/10/28</strong></div>
-<div>生效日期：<strong>2025/10/28</strong></div>
-<h2>导言</h2>
-<p>
-  <i>Line Go</i> 是一款由 <i>Marvin</i> （以下简称“我们”）提供的产品。
-  您在使用我们的服务时，我们可能会收集和使用您的相关信息。我们希望通过本《隐私政策》向您说明，在使用我们的服务时，我们如何收集、使用、储存和分享这些信息，以及我们为您提供的访问、更新、控制和保护这些信息的方式。
-  本《隐私政策》与您所使用的 <i>Line Go</i> 服务息息相关，希望您仔细阅读，在需要时，按照本《隐私政策》的指引，作出您认为适当的选择。本《隐私政策》中涉及的相关技术词汇，我们尽量以简明扼要的表述，并提供进一步说明的链接，以便您的理解。
-</p>
-<p><strong>您使用或继续使用我们的服务，即意味着同意我们按照本《隐私政策》收集、使用、储存和分享您的相关信息。</strong></p>
-<p>如对本《隐私政策》或相关事宜有任何问题，请通过 <strong>wuyou517@gmail.com</strong> 与我们联系。</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Line Go（一线牵）隐私政策 - 说明我们如何收集、使用、存储和保护您的个人信息。">
+<meta name="theme-color" content="#ffffff">
+<title>隐私政策 - Line Go（一线牵）</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f7f9;
+    --text:#1c1f23;
+    --text-soft:#5a6169;
+    --line:#e4e7eb;
+    --accent:#1f6feb;
+    --accent-soft:#eef4ff;
+    --warn-bg:#fff8e6;
+    --warn-line:#f0c96a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171a;
+      --bg-soft:#1c2024;
+      --text:#e8eaed;
+      --text-soft:#a3abb4;
+      --line:#2c3238;
+      --accent:#6aa8ff;
+      --accent-soft:#1b2733;
+      --warn-bg:#2a2418;
+      --warn-line:#6d5a2a;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:40px 22px 90px;}
 
-<h2>1. 我们收集的信息</h2>
-<p>我们或我们的第三方合作伙伴提供服务时，可能会收集、储存和使用下列与您有关的信息。如果您不提供相关信息，可能无法注册成为我们的用户或无法享受我们提供的某些服务，或者无法达到相关服务拟达到的效果。</p>
+  header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px;}
+  .lang{display:flex;gap:6px;font-size:13px;margin-bottom:18px;}
+  .lang a,.lang span{padding:5px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--text-soft);}
+  .lang .on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:600;}
 
+  h1{font-size:27px;line-height:1.35;margin:0 0 14px;letter-spacing:-.3px;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-soft);}
+  .meta span{background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:3px 10px;}
+
+  nav.toc{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:28px 0 6px;}
+  nav.toc p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--text-soft);text-transform:uppercase;}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px;font-size:14.5px;}
+  nav.toc li{margin:5px 0;break-inside:avoid;}
+  nav.toc a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
+  nav.toc a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  @media (max-width:620px){nav.toc ol{columns:1;}}
+
+  h2{font-size:20px;margin:44px 0 14px;padding-top:16px;border-top:1px solid var(--line);letter-spacing:-.2px;}
+  h3{font-size:16.5px;margin:26px 0 8px;color:var(--text);}
+  p{margin:12px 0;}
+  ul,ol{padding-left:22px;margin:12px 0;}
+  li{margin:7px 0;}
+  a{color:var(--accent);}
+  strong{font-weight:600;}
+  .muted{color:var(--text-soft);font-size:14px;}
+
+  .note{
+    background:var(--warn-bg);
+    border-left:3px solid var(--warn-line);
+    border-radius:0 8px 8px 0;
+    padding:14px 18px;
+    margin:20px 0;
+    font-size:15px;
+  }
+  .note strong:first-child{display:block;margin-bottom:4px;}
+
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.65;}
+  th{background:var(--bg-soft);font-weight:600;white-space:nowrap;}
+  td a{word-break:break-all;}
+
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-soft);}
+  footer p{margin:6px 0;}
+
+  @media print{
+    body{font-size:11pt;}
+    nav.toc{display:none;}
+    h2{page-break-after:avoid;}
+    .table-scroll{overflow:visible;}
+    table{min-width:0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="lang"><span class="on">简体中文</span><a href="./en.html">English</a></div>
+  <h1>Line Go（一线牵）隐私政策</h1>
+  <div class="meta">
+    <span>版本 v2.0</span>
+    <span>更新日期：2026 年 11 月 2 日</span>
+    <span>生效日期：2026 年 11 月 2 日</span>
+    <span>适用：微信小游戏版 / Android 版</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <p>目录</p>
+  <ol>
+    <li><a href="#s1">本政策的适用范围</a></li>
+    <li><a href="#s2">我们收集的信息</a></li>
+    <li><a href="#s3">设备权限说明</a></li>
+    <li><a href="#s4">第三方 SDK 与共享清单</a></li>
+    <li><a href="#s5">我们如何使用信息</a></li>
+    <li><a href="#s6">信息的存储与跨境传输</a></li>
+    <li><a href="#s7">信息的共享、转让与披露</a></li>
+    <li><a href="#s8">信息安全</a></li>
+    <li><a href="#s9">您的权利</a></li>
+    <li><a href="#s10">未成年人保护</a></li>
+    <li><a href="#s11">个性化广告与退出方式</a></li>
+    <li><a href="#s12">本地存储与同类技术</a></li>
+    <li><a href="#s13">本政策的更新</a></li>
+    <li><a href="#s14">联系我们</a></li>
+  </ol>
+</nav>
+
+<h2 style="border-top:none;padding-top:8px;">导言</h2>
+<p><strong>Line Go</strong>（中文名「一线牵」，以下简称「本应用」）是一款点线益智类游戏：点击相邻的圆点将其连线，走完关卡中的全部连线即可通关。本应用由开发者 <strong>Marvin</strong>（以下简称「我们」）独立开发与运营，目前以<strong>微信小游戏</strong>和 <strong>Android 应用</strong>两种形式向您提供。</p>
+<p>我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。本政策向您说明：我们收集哪些信息、为什么收集、如何使用与保存、与谁共享，以及您对这些信息拥有哪些权利。我们遵循<strong>权责一致、目的明确、选择同意、最小必要、确保安全、主体参与、公开透明</strong>的原则处理您的个人信息。</p>
+
+<div class="note">
+  <strong>三句话了解本政策</strong>
+  ① 本应用<strong>无需注册账号</strong>即可开始游戏，游戏进度默认只保存在您的设备上；<br>
+  ② 我们<strong>不会申请定位权限</strong>，不收集您的精确地理位置、通讯录、短信、相册、摄像头或麦克风内容；<br>
+  ③ 本应用包含广告与运营统计服务，为此会收集设备标识符等必要信息，您可在系统设置中关闭个性化广告。
+</div>
+
+<p>请您在使用本应用前仔细阅读并充分理解本政策。您开始使用本应用，即表示您已阅读并同意本政策；其中涉及敏感个人信息或需单独同意的条款，我们会以醒目方式提示，并在获得您的明示同意后再行处理。</p>
+
+<h2 id="s1">1. 本政策的适用范围</h2>
+<p><strong>1.1 适用产品</strong>：本政策适用于「Line Go（一线牵）」的微信小游戏版本，以及通过 Google Play 及其他应用商店分发的 Android 版本。不同渠道版本的功能可能存在差异，具体以您实际使用的版本为准。</p>
+<p><strong>1.2 不适用范围</strong>：本应用内可能展示第三方广告或包含跳转至第三方页面的链接。这些第三方服务由相应服务商独立提供并独立承担个人信息保护责任，其信息处理行为适用其自身的隐私政策，<strong>不适用本政策</strong>。我们建议您在向第三方提交任何信息前先行阅读其隐私政策。</p>
+<p><strong>1.3 个人信息处理者</strong>：开发者 Marvin（个人开发者），联系方式见第 14 条。</p>
+
+<h2 id="s2">2. 我们收集的信息</h2>
+<p>我们仅收集为实现具体功能所必需的信息。若您不提供某项非必需信息，不会影响您使用本应用的核心玩法。</p>
+
+<h3>2.1 您主动提供的信息</h3>
 <ul>
-    <li><strong>个人信息</strong>，使用谷歌账号注册登录，向我们提供的相关个人信息，例如名称，账户信息等。目前改数据仅保存在设备中，删除应用即可删除数据</li>
-<li><strong>位置信息</strong>，指您开启设备定位功能并使用我们基于位置提供的相关服务时，收集的有关您位置的信息，包括：<ul><li>您通过具有定位功能的移动设备使用我们的服务时，通过GPS或WiFi等方式收集的您的地理位置信息；</li><li>您可以通过关闭定位功能，停止对您的地理位置信息的收集。</li></ul></li>
-<li><strong>日志信息</strong>，指您使用我们的服务时，系统可能通过cookies、标识符及相关技术收集的信息，包括您的<strong>设备信息</strong>、<strong>浏览信息</strong>、<strong>点击信息</strong>，并将该等信息储存为日志信息，为您提供个性化的用户体验、保障服务安全。您可以通过浏览器设置拒绝或管理cookie、标识符或相关技术的使用。</li>
+  <li><strong>微信授权信息（可选）</strong>：在微信小游戏版本中，当您主动点击授权时，我们可能获取您的<strong>微信昵称、头像、地区（省市）</strong>，仅用于排行榜展示与成绩归属。<strong>拒绝授权不会影响您正常游戏</strong>，仅无法使用排行榜等社交功能。您可随时在微信「设置—隐私—授权管理」中撤回该授权。</li>
+  <li><strong>联系与反馈信息</strong>：当您通过邮件与我们联系时，我们会收到您的邮箱地址及您主动填写的沟通内容，仅用于答复您的问题。</li>
 </ul>
 
-<p>我们接入的第三方SDK：</p>
+<h3>2.2 我们自动收集的信息</h3>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>信息类别</th><th>具体内容</th><th>收集目的</th><th>是否必需</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>设备信息</td>
+      <td>设备品牌与型号、操作系统及版本、屏幕分辨率与 DPI、系统语言与时区、网络类型（Wi-Fi / 移动网络）、运营商</td>
+      <td>适配机型与分辨率、修复兼容性问题、保障游戏正常运行</td>
+      <td>必需</td>
+    </tr>
+    <tr>
+      <td>设备标识符</td>
+      <td>Android 广告标识符（OAID / AAID）、Android ID、可用于生成设备指纹的信息；iOS 广告标识符（IDFA，仅在您通过「应用跟踪透明度」授权后获取）；微信小游戏中的 OpenID（去标识化标识）</td>
+      <td>关联本地存档与排行榜成绩、防止作弊与刷榜、广告归因与频次控制</td>
+      <td>必需；可在系统设置中重置或关闭</td>
+    </tr>
+    <tr>
+      <td>游戏数据</td>
+      <td>关卡进度与解锁状态、通关用时、尝试与失败次数、道具使用记录、排行榜成绩、游戏设置</td>
+      <td>提供存档、恢复进度、生成排行榜、优化关卡难度</td>
+      <td>必需</td>
+    </tr>
+    <tr>
+      <td>日志与诊断信息</td>
+      <td>启动与退出记录、崩溃与错误日志、SDK 接口调用记录、IP 地址</td>
+      <td>定位崩溃与异常、安全风控、反作弊、保障服务稳定性</td>
+      <td>必需</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.3 来自第三方的信息</h3>
+<p>为使广告投放与效果统计正常工作，我们的广告与统计服务商可能向我们回传<strong>广告展示、点击、安装与激活的结果数据</strong>（不含您的姓名、手机号等直接身份信息），我们将其用于结算核对与投放效果分析。</p>
+
+<h3>2.4 我们不会收集的信息</h3>
+<div class="note">
+  <strong>我们承诺不收集以下信息：</strong>
+  精确地理位置（本应用<strong>未申请</strong>定位权限）、通讯录、短信与通话记录、相册与文件内容（仅写入必要的游戏缓存与日志）、麦克风录音、摄像头画面、人脸、指纹、声纹等生物识别信息、身份证件号码、银行卡与支付账户信息。
+</div>
+<p>若未来因功能需要确需处理上述信息，我们会另行告知处理目的、方式与范围，并依法取得您的<strong>单独同意</strong>；在此之前不会开始处理。</p>
+
+<h2 id="s3">3. 设备权限说明</h2>
+<p>本应用仅在实现对应功能时申请必要权限，Android 版本涉及的权限如下：</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>权限</th><th>用途</th><th>拒绝的后果</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>网络访问（INTERNET）</td><td>加载游戏资源、请求广告、上报统计</td><td>无法进入游戏</td></tr>
+    <tr><td>查看网络状态 / Wi-Fi 状态</td><td>判断网络可用性与类型，优化资源加载</td><td>不影响核心玩法</td></tr>
+    <tr><td>读取设备信息（READ_PHONE_STATE 等）</td><td>获取设备标识符，用于统计归因与反作弊</td><td>部分统计与广告功能受限，不影响核心玩法</td></tr>
+    <tr><td>存储读写（READ / WRITE_EXTERNAL_STORAGE）</td><td>写入游戏存档、缓存与运行日志</td><td>可能无法保存进度</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">微信小游戏版本仅在您主动点击时申请「用户信息」授权，不申请位置、相册、麦克风等授权。您可随时在手机「设置—应用—Line Go—权限」中逐项关闭授权，关闭后不影响已获得授权的其他功能。</p>
+
+<h2 id="s4">4. 第三方 SDK 与共享清单</h2>
+<p>为实现广告投放、数据统计与安全防护，本应用接入了下列第三方 SDK。我们已对合作方进行安全评估，并通过协议要求其仅在约定目的与范围内处理信息、采取同等水平的保护措施，不得将信息用于其他用途。</p>
+
+<h3>4.1 我们直接集成的 SDK</h3>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>SDK 名称</th><th>提供方</th><th>使用目的</th><th>收集的信息类型</th><th>隐私政策</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google AdMob</td>
+      <td>Google LLC</td>
+      <td>展示激励视频、插屏、横幅广告，衡量广告效果</td>
+      <td>广告标识符（AAID / IDFA）、IP 地址、基于 IP 的粗略位置（通常为城市级）、设备与操作系统信息、广告展示与点击记录</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Play 服务</td>
+      <td>Google LLC</td>
+      <td>应用分发、运行环境支持与崩溃诊断</td>
+      <td>设备信息、应用版本、崩溃与诊断数据</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>畅玩统计 SDK</td>
+      <td>畅玩（ChangWan）</td>
+      <td>游戏运营数据统计、广告事件上报、渠道归因</td>
+      <td>设备信息与设备标识符（含 IMEI / OAID / Android ID 等）、网络状态、角色 ID 与角色等级、广告展示 / 点击 / 下载事件</td>
+      <td>以 SDK 提供方随附文档及官网公布为准，您也可通过第 14 条联系方式向我们索取</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>4.2 由统计 SDK 集成并可能启用的第三方组件</h3>
+<p>上述畅玩统计 SDK 内部打包了下列第三方组件，用于数据统计、崩溃分析与广告归因。这些组件会按 SDK 配置在游戏运行过程中被调用：</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>组件</th><th>提供方</th><th>用途</th><th>主要收集的信息</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>友盟+ 统计 / 游戏分析</td><td>友盟同欣（阿里系）</td><td>留存与行为统计、崩溃分析</td><td>设备标识符、设备与系统信息、网络状态、崩溃日志、页面与按钮行为</td></tr>
+    <tr><td>热云 TrackingIO</td><td>热云数据</td><td>广告投放归因与效果分析</td><td>设备标识符、IP 地址、激活与注册事件、广告点击记录</td></tr>
+    <tr><td>穿山甲 / 巨量引擎 SDK</td><td>北京巨量引擎</td><td>广告投放与转化归因</td><td>设备标识符、网络信息、广告交互记录</td></tr>
+    <tr><td>腾讯广点通（GDT）Action SDK</td><td>深圳市腾讯计算机系统有限公司</td><td>广告转化归因</td><td>设备标识符、激活事件</td></tr>
+    <tr><td>移动安全联盟 OAID SDK</td><td>移动安全联盟（MSA）</td><td>生成匿名设备标识符，替代 IMEI</td><td>设备标识相关信息（不含个人身份）</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">上述组件的隐私政策链接，请以各服务商官网公布的最新版本为准；我们会随 SDK 版本更新同步更新本清单。若您需要具体链接，可通过第 14 条的联系方式向我们索取。</p>
+
+<h3>4.3 其他共享情形</h3>
+<p>除上述 SDK 服务商外，我们不会主动向任何第三方共享、转让您的个人信息，也不会出售您的个人信息。仅在下列情形下我们可能共享必要信息：</p>
 <ul>
-  <li>google AdMob<dl>
-    <dt>第三方名称：</dt><dd>google</dd>
-    <dt>使用目的：</dt><dd>接入广告</dd>
-    <dt>收集个人信息类型：</dt><dd>积分</dd>
-    <dt>处理方式：</dt><dd>兑换奖品，排名</dd>
-    <dt>隐私政策链接：</dt><dd>https://marvin517.github.io/PrivacyPolicy/</dd>
-  </dl></li>
- 
+  <li>已事先获得您的<strong>明示同意</strong>；</li>
+  <li>根据法律法规、司法或行政机关的强制性要求；</li>
+  <li>为维护您或他人的生命、财产等重大合法权益且难以取得本人同意；</li>
+  <li>因合并、收购、资产转让等交易需要转移信息时，我们会告知您接收方信息，并要求其继续受本政策约束。</li>
 </ul>
 
-<h2>2. 信息的存储</h2>
-<strong>2.1 信息存储的方式和期限</strong>
+<h2 id="s5">5. 我们如何使用信息</h2>
+<p>我们仅在下列目的范围内使用您的信息，超出范围使用时会再次征得您的同意：</p>
 <ul>
- <li>我们会通过安全的方式存储您的信息，包括本地存储（例如利用APP进行数据缓存）、数据库和服务器日志。</li>
- <li>一般情况下，我们只会在为实现服务目的所必需的时间内或法律法规规定的条件下存储您的个人信息。</li>
+  <li><strong>提供核心功能</strong>：保存与恢复游戏进度、生成排行榜、展示关卡提示与成绩；</li>
+  <li><strong>保障安全与公平</strong>：识别异常设备与作弊行为、防止刷榜、维护服务稳定；</li>
+  <li><strong>改进产品</strong>：分析关卡通过率与流失节点，优化难度曲线、界面与性能表现；</li>
+  <li><strong>广告投放与衡量</strong>：向您展示广告，统计展示与点击，评估投放效果并控制展示频次；</li>
+  <li><strong>客户服务</strong>：答复您的咨询、投诉与权利请求；</li>
+  <li><strong>履行法定义务</strong>：配合监管检查、响应司法与行政机关的合法要求。</li>
 </ul>
+<p>我们<strong>不会</strong>将您的个人信息用于：与上述目的无关的用途；通过自动化决策方式向您推送产生法律效力的信息；出售或出租给任何第三方。</p>
 
-<strong>2.2 信息存储的地域</strong>
-<ul>
- <li>我们会按照法律法规规定，将境内收集的用户个人信息存储于中国境内。</li>
- <li>目前我们不会跨境传输或存储您的个人信息。将来如需跨境传输或存储的，我们会向您告知信息出境的目的、接收方、安全保证措施和安全风险，并征得您的同意。</li>
-</ul>
+<h2 id="s6">6. 信息的存储与跨境传输</h2>
+<h3>6.1 存储方式</h3>
+<p>您的游戏进度与设置默认以本地文件形式保存在您的设备中；排行榜成绩、运营统计数据存储于我们或服务商位于中华人民共和国境内的服务器。</p>
 
-<strong>2.3 产品或服务停止运营时的通知</strong>
-<ul>
- <li>当我们的产品或服务发生停止运营的情况时，我们将以推送通知、公告等形式通知您，并在合理期限内删除您的个人信息或进行匿名化处理，法律法规另有规定的除外。</li>
-</ul>
+<h3>6.2 存储期限</h3>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>信息类型</th><th>存储期限</th></tr></thead>
+  <tbody>
+    <tr><td>本地游戏存档与设置</td><td>保存至您卸载本应用或清除应用数据时，届时自动删除</td></tr>
+    <tr><td>排行榜成绩与微信授权昵称 / 头像</td><td>保存至您申请删除或本服务终止；连续 24 个月无活动后，我们将删除或匿名化处理</td></tr>
+    <tr><td>运营统计与日志</td><td>自收集之日起不超过 6 个月，超期后删除或匿名化处理</td></tr>
+    <tr><td>广告与归因数据</td><td>由广告与统计服务商按其隐私政策规定的期限保存</td></tr>
+    <tr><td>客服沟通记录</td><td>问题处理完毕后 12 个月内删除</td></tr>
+  </tbody>
+</table>
+</div>
+<p>法律法规对保存期限另有规定的（如网络安全事件相关日志须留存不少于六个月），从其规定。</p>
 
-<h2>3. 信息安全</h2>
-<p>
-我们使用各种安全技术和程序，以防信息的丢失、不当使用、未经授权阅览或披露。例如，在某些服务中，我们将利用加密技术（例如SSL）来保护您提供的个人信息。但请您理解，由于技术的限制以及可能存在的各种恶意手段，在互联网行业，即便竭尽所能加强安全措施，也不可能始终保证信息百分之百的安全。您需要了解，您接入我们的服务所用的系统和通讯网络，有可能因我们可控范围外的因素而出现问题。
-</p>
+<h3>6.3 存储地域与跨境传输</h3>
+<p>我们在中华人民共和国境内收集和产生的个人信息，存储于境内。</p>
+<p><strong>需要特别说明的是：</strong>本应用接入的 Google AdMob、Google Play 服务等由境外主体提供。为实现广告展示与效果衡量，相关设备标识符、IP 地址与广告交互数据可能被传输至<strong>境外</strong>（包括美国等国家和地区）并由该等主体处理。此类传输基于您的同意及服务提供的必要性，我们会要求境外接收方遵守不低于本政策及所在地法律要求的保护标准。</p>
+<p>除上述情形外，我们不会向境外提供您的个人信息。若未来新增跨境处理场景，我们将依法履行告知义务、开展个人信息保护影响评估，并取得您的<strong>单独同意</strong>。</p>
 
-<h2>4. 我们如何使用信息</h2>
-<p>我们可能将在向您提供服务的过程之中所收集的信息用作下列用途：</p>
-<ul>
-  <li>向您提供服务；</li>
-  <li>在我们提供服务时，用于身份验证、客户服务、安全防范、诈骗监测、存档和备份用途，确保我们向您提供的产品和服务的安全性；</li>
-  <li>帮助我们设计新服务，改善我们现有服务；</li>
-  <li>使我们更加了解您如何接入和使用我们的服务，从而针对性地回应您的个性化需求，例如语言设定、位置设定、个性化的帮助服务和指示，或对您和其他用户作出其他方面的回应；</li>
-  <li>向您提供与您更加相关的广告以替代普遍投放的广告；</li>
-  <li>评估我们服务中的广告和其他促销及推广活动的效果，并加以改善；</li>
-  <li>软件认证或管理软件升级；</li>
-  <li>让您参与有关我们产品和服务的调查。</li>
-</ul>
+<h3>6.4 服务终止时的处理</h3>
+<p>若本应用停止运营，我们将提前通过应用内公告、商店页面等方式通知您，并在合理期限内删除或匿名化处理您的个人信息，法律法规另有规定的除外。</p>
 
-<h2>5. 信息共享</h2>
-<p>
-目前，我们不会主动共享或转让您的个人信息至第三方，如存在其他共享或转让您的个人信息或您需要我们将您的个人信息共享或转让至第三方情形时，我们会直接或确认第三方征得您对上述行为的明示同意。
-</p>
-<p>
-为了投放广告，评估、优化广告投放效果等目的，我们需要向广告主及其代理商等第三方合作伙伴共享您的部分数据，要求其严格遵守我们关于数据隐私保护的措施与要求，包括但不限于根据数据保护协议、承诺书及相关数据处理政策进行处理，避免识别出个人身份，保障隐私安全。
-</p>
-<p>
-我们不会向合作伙伴分享可用于识别您个人身份的信息（例如您的姓名或电子邮件地址），除非您明确授权。
-</p>
-<p>
-我们不会对外公开披露所收集的个人信息，如必须公开披露时，我们会向您告知此次公开披露的目的、披露信息的类型及可能涉及的敏感信息，并征得您的明示同意。
-</p>
-<p>
-随着我们业务的持续发展，我们有可能进行合并、收购、资产转让等交易，我们将告知您相关情形，按照法律法规及不低于本《隐私政策》所要求的标准继续保护或要求新的控制者继续保护您的个人信息。
-</p>
-<p>
-另外，根据相关法律法规及国家标准，以下情形中，我们可能会共享、转让、公开披露个人信息无需事先征得您的授权同意：
-</p>
+<h2 id="s7">7. 信息的共享、转让与披露</h2>
+<p>我们不会出售您的个人信息。共享与委托处理的具体清单见第 4 条。此外，根据法律法规及国家标准，以下情形中我们可能依法共享、转让或公开披露个人信息，且无需事先征得您的同意：</p>
 <ul>
   <li>与国家安全、国防安全直接相关的；</li>
   <li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
-  <li>犯罪侦查、起诉、审判和判决执行等直接相关的；</li>
-  <li>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</li>
-  <li>个人信息主体自行向社会公众公开个人信息的；</li>
-  <li>从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道。</li>
+  <li>与犯罪侦查、起诉、审判和判决执行等直接相关的；</li>
+  <li>出于维护您或其他个人的生命、财产等重大合法权益，但很难得到本人同意的；</li>
+  <li>您自行向社会公众公开的个人信息；</li>
+  <li>从合法公开披露的信息中收集的个人信息，如合法的新闻报道、政府信息公开等渠道。</li>
 </ul>
 
-<h2>6. 您的权利</h2>
-<p>
-在您使用我们的服务期间，我们可能会视产品具体情况为您提供相应的操作设置，以便您可以查询、删除、更正或撤回您的相关个人信息，您可参考相应的具体指引进行操作。此外，我们还设置了投诉举报渠道，您的意见将会得到及时的处理。如果您无法通过上述途径和方式行使您的个人信息主体权利，您可以通过本《隐私政策》中提供的联系方式提出您的请求，我们会按照法律法规的规定予以反馈。
-</p>
-<p>当您决定不再使用我们的产品或服务时，可以申请注销账户。注销账户后，除法律法规另有规定外，我们将删除或匿名化处理您的个人信息。</p>
+<h2 id="s8">8. 信息安全</h2>
+<p>我们采取符合行业标准的安全措施保护您的信息：</p>
+<ul>
+  <li>网络传输采用 <strong>HTTPS / TLS</strong> 加密，防止数据在传输过程中被窃取或篡改；</li>
+  <li>遵循<strong>最小必要</strong>原则，仅授予完成功能所必需的信息访问范围；</li>
+  <li>对服务端数据访问实施账号与权限管控，并保留操作日志；</li>
+  <li>仅使用官方渠道发布、及时更新的 SDK 版本，定期开展安全自查；</li>
+  <li>对内部人员进行隐私保护培训，签署保密义务。</li>
+</ul>
+<p>尽管我们已采取上述措施，但请您理解：互联网环境并非绝对安全，因技术限制与可能存在的恶意攻击，我们无法始终保证信息百分之百的安全。若不幸发生个人信息安全事件，我们将按法律法规要求及时启动应急预案、采取补救措施，并以推送通知或公告等方式告知您事件情况、可能的影响及您可采取的防范建议，同时按规定向监管部门报告。</p>
 
-<h2>7. 变更</h2>
-<p>
-我们可能适时修订本《隐私政策》的条款。当变更发生时，我们会在版本更新时向您提示新的《隐私政策》，并向您说明生效日期。请您仔细阅读变更后的《隐私政策》内容，<strong>若您继续使用我们的服务，即表示您同意我们按照更新后的《隐私政策》处理您的个人信息。</strong>
-</p>
+<h2 id="s9">9. 您的权利</h2>
+<p>依据《中华人民共和国个人信息保护法》等法律法规，您对自己的个人信息享有以下权利：</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>权利</th><th>如何行使</th></tr></thead>
+  <tbody>
+    <tr><td>查阅、复制</td><td>通过第 14 条邮箱提出申请，我们将在核实身份后提供</td></tr>
+    <tr><td>更正、补充</td><td>游戏内可直接修改昵称与头像；其他信息可通过邮箱申请更正</td></tr>
+    <tr><td>删除</td><td>通过邮箱申请删除排行榜成绩与授权信息；卸载应用或清除应用数据可删除本地全部存档</td></tr>
+    <tr><td>撤回同意</td><td>在手机「设置—应用—Line Go—权限」关闭权限；在微信「设置—隐私—授权管理」撤回授权；卸载应用即视为终止使用</td></tr>
+    <tr><td>注销 / 删除账号</td><td>本应用<strong>无需注册账号</strong>，不存在账号体系；删除本地存档即完成数据清除。若您通过第三方平台账号登录，可在该平台内注销对应账号</td></tr>
+    <tr><td>限制或拒绝处理</td><td>关闭个性化广告（见第 11 条）后，我们不会再基于您的标识符进行个性化推荐，但仍会展示非个性化广告</td></tr>
+    <tr><td>投诉举报</td><td>通过第 14 条邮箱投诉；也可向网信部门（12377）、工业和信息化部门（12321 / 12300）等监管机构举报</td></tr>
+  </tbody>
+</table>
+</div>
+<p>我们将在收到您的请求并完成身份核验后 <strong>15 个工作日</strong>内予以答复。对于合理的请求，我们不收取费用；对于重复、超出合理限度或需要过多技术手段的请求，我们可能予以拒绝并说明理由。</p>
 
-<h2>8. 未成年人保护</h2>
-<p>
-我们鼓励父母或监护人指导未满十八岁的未成年人使用我们的服务。我们建议未成年人鼓励他们的父母或监护人阅读本《隐私政策》，并建议未成年人在提交的个人信息之前寻求父母或监护人的同意和指导。
-</p>
+<h2 id="s10">10. 未成年人保护</h2>
+<p>本应用为休闲益智游戏，内容适合各年龄段用户，但我们<strong>不主动面向不满十四周岁的儿童</strong>收集个人信息。</p>
+<ul>
+  <li>若您是不满十四周岁的儿童，请在父母或其他监护人的陪同下阅读本政策，并在取得监护人同意后使用本应用；</li>
+  <li>若您是不满十八周岁的未成年人，建议在监护人指导下使用，并请监护人帮助您理解本政策；</li>
+  <li>对于确认为儿童的个人信息，我们仅在获得监护人<strong>单独同意</strong>后处理，并采取更严格的保护措施，<strong>不会</strong>基于儿童的个人信息进行个性化广告推送；</li>
+  <li>若监护人发现我们在未获同意的情况下收集了儿童个人信息，可通过第 14 条邮箱联系我们，我们将在核实后尽快删除。</li>
+</ul>
+
+<h2 id="s11">11. 个性化广告与退出方式</h2>
+<p>本应用展示的广告可能由第三方广告平台（如 Google AdMob）基于您的设备标识符与粗略位置进行个性化投放。您可以通过以下方式关闭个性化广告：</p>
+<ul>
+  <li><strong>Android</strong>：设置 → Google → 广告 → 「删除广告 ID」或「停用广告个性化」；</li>
+  <li><strong>iOS</strong>：设置 → 隐私与安全性 → 跟踪 → 关闭「允许 App 请求跟踪」；设置 → 隐私与安全性 → Apple 广告 → 关闭个性化广告；</li>
+  <li><strong>微信小游戏</strong>：微信 → 我 → 设置 → 个人信息与权限 → 个性化广告管理 → 关闭；</li>
+  <li><strong>Google 账号层面</strong>：访问 <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> 管理广告个性化设置。</li>
+</ul>
+<p>关闭个性化广告后，您仍会看到广告，但广告的相关性会降低，展示频次可能增加。关闭个性化不影响广告展示与结算所必需的基础数据处理。</p>
+
+<h2 id="s12">12. 本地存储与同类技术</h2>
+<p>本应用不使用浏览器 Cookie 进行跨站跟踪。为保存进度与提升加载速度，我们会在您的设备上使用本地存储技术，包括：</p>
+<ul>
+  <li><strong>本地存档文件</strong>：保存关卡进度、设置、登录状态（微信 OpenID）；</li>
+  <li><strong>缓存文件</strong>：缓存图片、音频与关卡配置，减少重复下载；</li>
+  <li><strong>SDK 本地标识</strong>：广告与统计 SDK 为区分设备而生成的本地标识符。</li>
+</ul>
+<p>您可以通过清除应用数据或卸载应用删除上述本地信息。删除后，未同步至服务器的游戏进度将无法恢复。</p>
+
+<h2 id="s13">13. 本政策的更新</h2>
+<p>我们可能因功能调整、法律法规或监管要求变化而更新本政策。更新时，我们会在本页面发布新版本并标注更新日期与生效日期；对于<strong>处理目的、处理方式或信息类型发生重大变化</strong>的情形，我们将通过应用内弹窗、公告等方式显著提示，必要时重新征得您的同意。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>版本</th><th>日期</th><th>主要变更</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>v2.0</td><td>2026-11-02</td>
+      <td>重构全文结构；补充权限清单与第三方 SDK 完整清单；更正广告 SDK 信息类型描述；新增数据跨境传输、个性化广告退出、数据删除与未成年人保护条款；新增英文版本</td>
+    </tr>
+    <tr>
+      <td>v1.0</td><td>2025-10-28</td>
+      <td>首次发布</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>若您不同意更新后的政策，请停止使用本应用并卸载；您继续使用即表示接受更新后的政策。</p>
+
+<h2 id="s14">14. 联系我们</h2>
+<p>如您对本政策有任何疑问、意见或投诉，或希望行使上述个人信息权利，请通过以下方式联系我们：</p>
+<ul>
+  <li><strong>个人信息处理者</strong>：Marvin（Line Go / 一线牵 开发者）</li>
+  <li><strong>电子邮箱</strong>：<a href="mailto:wuyou517@gmail.com">wuyou517@gmail.com</a></li>
+  <li><strong>响应时限</strong>：收到并核验您的请求后 15 个工作日内答复</li>
+</ul>
+<p>若您对我们的答复不满意，或认为我们的个人信息处理行为损害了您的合法权益，您可以向网信、电信、公安、市场监管等主管部门投诉举报，也可以向有管辖权的人民法院提起诉讼。</p>
+
+<footer>
+  <p>Line Go（一线牵）隐私政策 · v2.0 · 2026 年 11 月 2 日生效</p>
+  <p>本页面为最新版本，历史版本可通过仓库提交记录查阅。<a href="./en.html">English version</a></p>
+</footer>
+
+</div>
+</body>
+</html>
