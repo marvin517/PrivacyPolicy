@@ -7,6 +7,8 @@
 | 政策索引（顶层） | `index.html` | https://marvin517.github.io/PrivacyPolicy/ |
 | Line Go（一线牵） | `linego/` | https://marvin517.github.io/PrivacyPolicy/linego/ |
 | Line Go（English） | `linego/en.html` | https://marvin517.github.io/PrivacyPolicy/linego/en.html |
+| Cookie Factory（饼干工厂） | `cookiefactory/` | https://marvin517.github.io/PrivacyPolicy/cookiefactory/ |
+| Cookie Factory（English） | `cookiefactory/en.html` | https://marvin517.github.io/PrivacyPolicy/cookiefactory/en.html |
 
 ## 维护说明
 
