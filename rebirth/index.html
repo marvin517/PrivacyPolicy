@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rebirth（重生）隐私政策 - 说明我们如何收集、使用、存储和保护您的个人信息。">
+<meta name="theme-color" content="#ffffff">
+<title>隐私政策 - Rebirth（重生）</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f7f9;
+    --text:#1c1f23;
+    --text-soft:#5a6169;
+    --line:#e4e7eb;
+    --accent:#1f6feb;
+    --accent-soft:#eef4ff;
+    --warn-bg:#fff8e6;
+    --warn-line:#f0c96a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171a;
+      --bg-soft:#1c2024;
+      --text:#e8eaed;
+      --text-soft:#a3abb4;
+      --line:#2c3238;
+      --accent:#6aa8ff;
+      --accent-soft:#1b2733;
+      --warn-bg:#2a2418;
+      --warn-line:#6d5a2a;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:40px 22px 90px;}
+
+  header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px;}
+  .lang{display:flex;gap:6px;font-size:13px;margin-bottom:18px;}
+  .lang a,.lang span{padding:5px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--text-soft);}
+  .lang .on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:600;}
+
+  h1{font-size:27px;line-height:1.35;margin:0 0 14px;letter-spacing:-.3px;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-soft);}
+  .meta span{background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:3px 10px;}
+
+  nav.toc{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:28px 0 6px;}
+  nav.toc p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--text-soft);text-transform:uppercase;}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px;font-size:14.5px;}
+  nav.toc li{margin:5px 0;break-inside:avoid;}
+  nav.toc a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
+  nav.toc a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  @media (max-width:620px){nav.toc ol{columns:1;}}
+
+  h2{font-size:20px;margin:44px 0 14px;padding-top:16px;border-top:1px solid var(--line);letter-spacing:-.2px;}
+  h3{font-size:16.5px;margin:26px 0 8px;color:var(--text);}
+  p{margin:12px 0;}
+  ul,ol{padding-left:22px;margin:12px 0;}
+  li{margin:7px 0;}
+  a{color:var(--accent);}
+  strong{font-weight:600;}
+  .muted{color:var(--text-soft);font-size:14px;}
+
+  .note{
+    background:var(--warn-bg);
+    border-left:3px solid var(--warn-line);
+    border-radius:0 8px 8px 0;
+    padding:14px 18px;
+    margin:20px 0;
+    font-size:15px;
+  }
+  .note strong:first-child{display:block;margin-bottom:4px;}
+
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.65;}
+  th{background:var(--bg-soft);font-weight:600;white-space:nowrap;}
+  td a{word-break:break-all;}
+
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-soft);}
+  footer p{margin:6px 0;}
+
+  @media print{
+    body{font-size:11pt;}
+    nav.toc{display:none;}
+    h2{page-break-after:avoid;}
+    .table-scroll{overflow:visible;}
+    table{min-width:0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="lang"><span class="on">简体中文</span><a href="./en.html">English</a></div>
+  <h1>Rebirth（重生）隐私政策</h1>
+  <div class="meta">
+    <span>版本 v1.0</span>
+    <span>更新日期：2026 年 11 月 7 日</span>
+    <span>生效日期：2026 年 11 月 7 日</span>
+    <span>适用：Android 版 / 网页版</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <p>目录</p>
+  <ol>
+    <li><a href="#s1">本政策的适用范围</a></li>
+    <li><a href="#s2">我们收集的信息</a></li>
+    <li><a href="#s3">设备权限说明</a></li>
+    <li><a href="#s4">第三方 SDK 与共享清单</a></li>
+    <li><a href="#s5">我们如何使用信息</a></li>
+    <li><a href="#s6">信息的存储与跨境传输</a></li>
+    <li><a href="#s7">信息的共享、转让与披露</a></li>
+    <li><a href="#s8">信息安全</a></li>
+    <li><a href="#s9">您的权利</a></li>
+    <li><a href="#s10">未成年人保护</a></li>
+    <li><a href="#s11">广告、交叉推广与退出方式</a></li>
+    <li><a href="#s12">本地存储与同类技术</a></li>
+    <li><a href="#s13">本政策的更新</a></li>
+    <li><a href="#s14">联系我们</a></li>
+  </ol>
+</nav>
+
+<h2 style="border-top:none;padding-top:8px;">导言</h2>
+<p><strong>Rebirth</strong>（中文名「重生」，以下简称「本应用」）是一款数据驱动的人生模拟游戏：按下「出生」后，按各国真实出生人口权重抽取你的出生国家、性别、城乡、家庭与父母，然后一年一年把这一生走完；事件概率取自公开统计数据。本应用由开发者 <strong>Marvin</strong>（以下简称「我们」）独立开发与运营，目前以 <strong>Android 应用</strong>（经 Google Play、itch.io 等渠道分发）和<strong>网页版</strong>（经 itch.io 等平台在浏览器中运行）两种形式向您提供，支持简体中文与英文。</p>
+<p>我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。本政策向您说明：我们收集哪些信息、为什么收集、如何使用与保存、与谁共享，以及您对这些信息拥有哪些权利。我们遵循<strong>权责一致、目的明确、选择同意、最小必要、确保安全、主体参与、公开透明</strong>的原则处理您的个人信息。</p>
+
+<div class="note">
+  <strong>三句话了解本政策</strong>
+  ① 本应用<strong>无需注册账号</strong>即可开始游戏，每一段人生的存档只保存在您的设备上；<br>
+  ② 我们<strong>不收集</strong>您的姓名、手机号、通讯录、相册、麦克风、摄像头画面，也<strong>不会读取或上传</strong>您的定位信息；<br>
+  ③ 本应用使用<strong>匿名运营统计</strong>（GameAnalytics）来了解玩法进度与流失节点，Android 版另集成了 Google AdMob 广告能力（当前线上配置中广告位默认关闭）。
+</div>
+
+<p>请您在使用本应用前仔细阅读并充分理解本政策。您开始使用本应用，即表示您已阅读并同意本政策；其中涉及敏感个人信息或需单独同意的条款，我们会以醒目方式提示，并在获得您的明示同意后再行处理。</p>
+
+<h2 id="s1">1. 本政策的适用范围</h2>
+<p><strong>1.1 适用产品</strong>：本政策适用于「Rebirth（重生）」的 Android 版本（通过 Google Play、itch.io 等渠道分发）以及网页版本（通过 itch.io 等平台在浏览器中运行）。不同渠道版本的功能可能存在差异（例如广告与部分平台能力仅在 Android 版提供），具体以您实际使用的版本为准。</p>
+<p><strong>1.2 不适用范围</strong>：网页版依托的分发平台（如 itch.io）以及 Android 版的系统与商店服务（如 Google Play）自身可能使用 Cookie、设备标识与统计技术，其信息处理行为适用该等平台自身的隐私政策，<strong>不适用本政策</strong>。本应用内展示的第三方广告、交叉推广入口及跳转的第三方页面，由相应服务商独立提供并独立承担个人信息保护责任。我们建议您在向第三方提交任何信息前先行阅读其隐私政策。</p>
+<p><strong>1.3 个人信息处理者</strong>：开发者 Marvin（个人开发者），联系方式见第 14 条。</p>
+
+<h2 id="s2">2. 我们收集的信息</h2>
+<p>我们仅收集为实现具体功能所必需的信息。若您不提供某项非必需信息，不会影响您使用本应用的核心玩法。</p>
+
+<h3>2.1 您主动提供的信息</h3>
+<ul>
+  <li><strong>联系与反馈信息</strong>：当您通过邮件与我们联系时，我们会收到您的邮箱地址及您主动填写的沟通内容（可能包含您附带的截图），仅用于答复与排查您的问题。除此之外，本应用<strong>不设置任何信息填写入口</strong>，也不会要求您上传素材或填写个人资料。</li>
+</ul>
+
+<h3>2.2 我们自动收集的信息</h3>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>信息类别</th><th>具体内容</th><th>收集目的</th><th>是否必需</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>匿名游戏事件</td>
+      <td>会话开始（app_start）、人生开始（level_start）、人生结束（game_over：死亡年龄、出生国家代码、死因类别、游戏时长）、关键抉择（decision_made：抉择编号、年龄、所选选项序号）、分享动作（life_shared）</td>
+      <td>了解玩法推进与流失节点，评估内容平衡与寿命模型是否合理</td>
+      <td>必需；不含可识别到个人的内容</td>
+    </tr>
+    <tr>
+      <td>匿名标识符</td>
+      <td>由统计服务在本地随机生成并保存的匿名用户标识与会话标识（非广告标识符，不含手机号、邮箱或账号）</td>
+      <td>把同一次会话内的事件归并统计，计算留存与重复游玩情况</td>
+      <td>必需；可在清除应用数据后重置</td>
+    </tr>
+    <tr>
+      <td>设备与运行信息</td>
+      <td>设备厂商与型号、操作系统及版本、平台类型（Android / WebGL）、屏幕分辨率与语言、应用版本</td>
+      <td>适配机型与分辨率、定位兼容性与崩溃问题、分平台分析</td>
+      <td>必需</td>
+    </tr>
+    <tr>
+      <td>日志与诊断信息</td>
+      <td>启动与会话记录、配置加载失败等错误信息、崩溃日志、IP 地址（由服务商在网络请求中自动接收）</td>
+      <td>排查异常与配置下发问题，保障游戏正常运行</td>
+      <td>必需</td>
+    </tr>
+    <tr>
+      <td>广告相关数据（仅 Android 且广告开启时）</td>
+      <td>广告标识符（AAID）、IP 地址、基于 IP 的粗略地区（通常为城市级）、设备信息、广告展示/点击/关闭记录</td>
+      <td>展示开屏与插屏广告、控制展示频次、衡量广告效果与结算</td>
+      <td>广告关闭时不收集；可在系统设置中重置或删除广告 ID</td>
+    </tr>
+    <tr>
+      <td>购买记录</td>
+      <td><strong>本版本不提供任何内购或付费商品</strong>，因此不产生购买信息</td>
+      <td>—</td>
+      <td>不适用</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.3 来自第三方的信息</h3>
+<p>为使运营统计与（如开启）广告投放正常工作，我们的统计与广告服务商可能向我们回传<strong>汇总或匿名的结果数据</strong>（例如事件总量、广告展示与点击的统计结果，不含您的姓名、手机号等直接身份信息），我们将其用于效果核对与产品改进。</p>
+
+<h3>2.4 我们不会收集的信息</h3>
+<div class="note">
+  <strong>我们承诺不收集以下信息：</strong>
+  姓名、手机号、电子邮箱（除您主动来信）、身份证件号码、银行卡与支付账户信息、通讯录、短信与通话记录、相册与文件内容、麦克风录音、摄像头画面、人脸、指纹、声纹等生物识别信息，以及您的<strong>精确地理位置</strong>。
+</div>
+<p>本应用不会读取设备的定位数据，也不会把定位信息上传至任何服务器。若未来因功能需要确需处理上述信息，我们会另行告知处理目的、方式与范围，并依法取得您的<strong>单独同意</strong>；在此之前不会开始处理。</p>
+
+<h2 id="s3">3. 设备权限说明</h2>
+<p>本应用仅在实现对应功能时申请必要权限，Android 版本在系统清单中声明的权限如下：</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>权限</th><th>用途</th><th>拒绝的后果</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>网络访问（INTERNET）</td><td>拉取远程配置与资源、上报匿名统计、在广告开启时请求广告</td><td>无法获取最新配置与统计，不影响单机游玩</td></tr>
+    <tr><td>查看网络状态（ACCESS_NETWORK_STATE）</td><td>判断网络可用性与类型，避免在无网络时反复重试</td><td>不影响核心玩法</td></tr>
+    <tr><td>广告标识符（AD_ID / ACCESS_ADSERVICES_AD_ID、ATTRIBUTION、TOPICS）</td><td>供广告 SDK 获取广告标识符，用于广告频次控制、防作弊与效果衡量</td><td>广告功能受限，不影响核心玩法</td></tr>
+    <tr><td>前台服务与唤醒锁定（FOREGROUND_SERVICE、WAKE_LOCK）</td><td>由广告与系统组件在展示广告、保持任务运行时使用，避免中途被系统中断</td><td>不影响核心玩法</td></tr>
+    <tr><td>定位（ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION）</td><td><strong>仅由广告 SDK 合并声明</strong>，用于广告的地区相关性；本应用<strong>不会在运行时向您申请</strong>该权限，也不会读取或上传您的定位信息</td><td>不适用；您可在系统设置中随时拒绝或撤销</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">本应用<strong>未申请</strong>相机、麦克风、通讯录、短信、通话记录、读取手机状态与外部存储等权限，也不会读取设备上其他应用的信息。您可随时在手机「设置—应用—Rebirth—权限」中查看与管理授权。网页版不申请上述设备权限，仅使用浏览器提供的本地存储能力。</p>
+
+<h2 id="s4">4. 第三方 SDK 与共享清单</h2>
+<p>为实现运营统计、远程配置分发与（如开启）广告投放，本应用接入了下列第三方服务或 SDK。我们已对合作方进行安全评估，并通过协议要求其仅在约定目的与范围内处理信息、采取同等水平的保护措施，不得将信息用于其他用途。</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>SDK / 服务</th><th>提供方</th><th>使用目的</th><th>收集的信息类型</th><th>隐私政策</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GameAnalytics</td>
+      <td>GameAnalytics ApS</td>
+      <td>匿名运营统计：会话、人生进度、抉择、分享与广告事件</td>
+      <td>匿名用户标识与会话标识、设备厂商与型号、操作系统版本、平台类型、应用版本、事件记录、IP 地址</td>
+      <td><a href="https://gameanalytics.com/privacy" target="_blank" rel="noopener">gameanalytics.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google AdMob / Google Mobile Ads SDK（仅 Android，当前广告位默认关闭）</td>
+      <td>Google LLC</td>
+      <td>在广告开启后展示开屏广告与人生结束时的插屏广告，控制频次并衡量效果</td>
+      <td>广告标识符（AAID）、IP 地址、基于 IP 的粗略地区、设备与操作系统信息、广告展示与交互记录</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Play 服务（仅 Android）</td>
+      <td>Google LLC</td>
+      <td>应用分发、系统组件与广告 SDK 的底层依赖</td>
+      <td>由 Google Play 服务按其自身政策处理，不经过我们的服务器</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>jsDelivr 公共 CDN</td>
+      <td>jsDelivr（开源内容分发网络）</td>
+      <td>下发游戏的远程配置、公告与图标等静态资源</td>
+      <td>请求的 IP 地址、请求路径（仅含游戏标识与平台类型）、请求时间；不包含账号或身份信息</td>
+      <td><a href="https://www.jsdelivr.com/privacy" target="_blank" rel="noopener">jsdelivr.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>itch.io（网页版分发平台）</td>
+      <td>itch.io</td>
+      <td>在浏览器中托管并运行网页版</td>
+      <td>由 itch.io 按其自身隐私政策处理页面访问与 Cookie 等信息</td>
+      <td><a href="https://itch.io/docs/legal/privacy-policy" target="_blank" rel="noopener">itch.io/docs/legal/privacy-policy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">上述服务的隐私政策以其官网公布的最新版本为准；我们会随 SDK 版本与接入情况更新本清单。</p>
+
+<h3>4.1 其他共享情形</h3>
+<p>除上述服务商外，我们不会主动向任何第三方共享、转让您的个人信息，也不会出售您的个人信息。仅在下列情形下我们可能共享必要信息：</p>
+<ul>
+  <li>已事先获得您的<strong>明示同意</strong>；</li>
+  <li>根据法律法规、司法或行政机关的强制性要求；</li>
+  <li>为维护您或他人的生命、财产等重大合法权益且难以取得本人同意；</li>
+  <li>因合并、收购、资产转让等交易需要转移信息时，我们会告知您接收方信息，并要求其继续受本政策约束。</li>
+</ul>
+
+<h2 id="s5">5. 我们如何使用信息</h2>
+<p>我们仅在下列目的范围内使用您的信息，超出范围使用时会再次征得您的同意：</p>
+<ul>
+  <li><strong>提供核心功能</strong>：保存与恢复每一段人生的进度、历史档案与界面偏好；</li>
+  <li><strong>保障安全与稳定</strong>：识别异常启动与配置加载失败，修复崩溃与兼容性问题；</li>
+  <li><strong>改进产品</strong>：分析玩法推进与流失节点，校准事件概率、寿命模型与界面性能；</li>
+  <li><strong>广告投放与衡量</strong>（仅在广告开启时）：展示广告、控制展示频次、统计展示与点击并完成结算；</li>
+  <li><strong>客户服务</strong>：答复您的咨询、投诉与权利请求；</li>
+  <li><strong>履行法定义务</strong>：配合监管检查、响应司法与行政机关的合法要求。</li>
+</ul>
+<p>我们<strong>不会</strong>将您的个人信息用于：与上述目的无关的用途；通过自动化决策方式向您推送产生法律效力的信息；出售或出租给任何第三方。</p>
+
+<h2 id="s6">6. 信息的存储与跨境传输</h2>
+<h3>6.1 存储方式</h3>
+<p>您的游戏进度、历史人生档案与设置以本地存储形式保存在您的设备中（Android 版为应用私有目录，网页版为浏览器本地存储），<strong>不上传至我们的服务器</strong>。我们<strong>没有自建账号服务器</strong>，也不保存您的存档副本。匿名统计数据存储于 GameAnalytics 的服务器；广告数据（如开启）存储于 Google 的服务器。</p>
+
+<h3>6.2 存储期限</h3>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>信息类型</th><th>存储期限</th></tr></thead>
+  <tbody>
+    <tr><td>本地游戏存档、历史人生与设置</td><td>保存至您卸载本应用或清除应用数据 / 浏览器数据时，届时自动删除</td></tr>
+    <tr><td>匿名运营统计与日志</td><td>由 GameAnalytics 按其隐私政策规定的期限保存（通常自收集之日起不超过 12 个月）</td></tr>
+    <tr><td>广告数据（如开启）</td><td>由广告服务商按其隐私政策规定的期限保存</td></tr>
+    <tr><td>客服沟通记录</td><td>问题处理完毕后 12 个月内删除</td></tr>
+  </tbody>
+</table>
+</div>
+<p>法律法规对保存期限另有规定的，从其规定。</p>
+
+<h3>6.3 存储地域与跨境传输</h3>
+<p><strong>需要特别说明的是：</strong>本应用接入的 GameAnalytics、Google AdMob、Google Play 服务与 jsDelivr CDN 由境外主体提供。为实现统计、广告（如开启）、系统组件与配置下发，相关匿名标识符、设备信息、IP 地址与事件数据可能被传输至<strong>境外</strong>（包括美国、欧盟成员国等国家和地区）并由该等主体处理。此类传输基于服务提供的必要性，我们会要求境外接收方遵守不低于本政策及所在地法律要求的保护标准。</p>
+<p>除上述情形外，我们不会向境外提供您的个人信息。若未来新增跨境处理场景，我们将依法履行告知义务、开展个人信息保护影响评估，并取得您的<strong>单独同意</strong>。</p>
+
+<h3>6.4 服务终止时的处理</h3>
+<p>若本应用停止运营，我们将提前通过应用内公告、商店页面等方式通知您，并在合理期限内删除或匿名化处理您的个人信息，法律法规另有规定的除外。</p>
+
+<h2 id="s7">7. 信息的共享、转让与披露</h2>
+<p>我们不会出售您的个人信息。共享与委托处理的具体清单见第 4 条。此外，根据法律法规及国家标准，以下情形中我们可能依法共享、转让或公开披露个人信息，且无需事先征得您的同意：</p>
+<ul>
+  <li>与国家安全、国防安全直接相关的；</li>
+  <li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
+  <li>与犯罪侦查、起诉、审判和判决执行等直接相关的；</li>
+  <li>出于维护您或其他个人的生命、财产等重大合法权益，但很难得到本人同意的；</li>
+  <li>您自行向社会公众公开的个人信息；</li>
+  <li>从合法公开披露的信息中收集的个人信息，如合法的新闻报道、政府信息公开等渠道。</li>
+</ul>
+
+<h2 id="s8">8. 信息安全</h2>
+<p>我们采取符合行业标准的安全措施保护您的信息：</p>
+<ul>
+  <li>网络传输采用 <strong>HTTPS / TLS</strong> 加密，防止数据在传输过程中被窃取或篡改；</li>
+  <li>遵循<strong>最小必要</strong>原则，仅上报与玩法进度相关的匿名事件，不上报您输入的文本或设备上的其他内容；</li>
+  <li>本应用不设自建服务器与账号体系，不存在存档集中存储的风险，最大限度减少数据留存；</li>
+  <li>仅使用官方渠道发布、及时更新的 SDK 版本，定期开展安全自查。</li>
+</ul>
+<p>尽管我们已采取上述措施，但请您理解：互联网环境并非绝对安全，因技术限制与可能存在的恶意攻击，我们无法始终保证信息百分之百的安全。若不幸发生个人信息安全事件，我们将按法律法规要求及时启动应急预案、采取补救措施，并以应用内公告或邮件等方式告知您事件情况、可能的影响及您可采取的防范建议，同时按规定向监管部门报告。</p>
+
+<h2 id="s9">9. 您的权利</h2>
+<p>依据《中华人民共和国个人信息保护法》等法律法规，您对自己的个人信息享有以下权利：</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>权利</th><th>如何行使</th></tr></thead>
+  <tbody>
+    <tr><td>查阅、复制</td><td>通过第 14 条邮箱提出申请，我们将在核实后提供所持有的匿名统计数据说明</td></tr>
+    <tr><td>更正、补充</td><td>游戏设置与界面偏好在应用内直接修改；其他信息可通过邮箱申请更正</td></tr>
+    <tr><td>删除</td><td>卸载应用或清除应用数据 / 浏览器数据即可删除本地全部存档与匿名标识符；服务端统计数据可通过邮箱申请删除</td></tr>
+    <tr><td>撤回同意</td><td>在手机「设置—应用—Rebirth—权限」关闭相关授权；卸载应用即视为终止使用</td></tr>
+    <tr><td>注销 / 删除账号</td><td>本应用<strong>无需注册账号</strong>，不存在账号体系；删除本地存档即完成数据清除</td></tr>
+    <tr><td>限制或拒绝处理</td><td>可在系统设置中关闭个性化广告（见第 11 条）；拒绝网络权限后，应用仍可离线游玩，仅无法接收配置与统计</td></tr>
+    <tr><td>投诉举报</td><td>通过第 14 条邮箱投诉；也可向网信部门（12377）、工业和信息化部门（12321 / 12300）等监管机构举报</td></tr>
+  </tbody>
+</table>
+</div>
+<p>我们将在收到您的请求并完成身份核验后 <strong>15 个工作日</strong>内予以答复。对于合理的请求，我们不收取费用；对于重复、超出合理限度或需要过多技术手段的请求，我们可能予以拒绝并说明理由。</p>
+
+<h2 id="s10">10. 未成年人保护</h2>
+<p>本应用以真实统计数据模拟人生，内容涉及<strong>死亡、疾病、贫困、婚育</strong>等严肃主题，更适合具备一定理解能力的青少年与成年玩家，我们<strong>不面向不满十四周岁的儿童</strong>推广，也不会主动向其收集个人信息。</p>
+<ul>
+  <li>若您是不满十四周岁的儿童，请在父母或其他监护人的陪同下阅读本政策，并在取得监护人同意后使用本应用；</li>
+  <li>若您是不满十八周岁的未成年人，建议在监护人指导下使用，并请监护人帮助您理解本政策与游戏内容；</li>
+  <li>对于确认为儿童的个人信息，我们仅在获得监护人<strong>单独同意</strong>后处理，并采取更严格的保护措施；</li>
+  <li>若监护人发现我们在未获同意的情况下收集了儿童个人信息，可通过第 14 条邮箱联系我们，我们将在核实后尽快删除。</li>
+</ul>
+
+<h2 id="s11">11. 广告、交叉推广与退出方式</h2>
+<p><strong>11.1 广告现状</strong>：Android 版集成了 Google AdMob 广告能力，但<strong>当前线上配置中广告开关处于关闭状态</strong>，您在当前版本中通常不会看到广告。若我们后续开启广告，将用于展示开屏广告以及一段人生结束后的插屏广告；届时我们会更新本政策，并在应用内以显著方式提示。</p>
+<p>广告开启后，广告可能由 Google AdMob 基于您的设备标识符与粗略地区进行个性化投放。您可以通过以下方式关闭个性化广告：</p>
+<ul>
+  <li><strong>Android</strong>：设置 → Google → 广告 → 「删除广告 ID」或「停用广告个性化」；</li>
+  <li><strong>浏览器（网页版）</strong>：浏览器设置中清除并阻止第三方 Cookie；或访问 <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> 管理 Google 广告个性化设置；</li>
+  <li><strong>广告屏蔽扩展</strong>：网页版可使用内容拦截扩展限制广告脚本加载，不影响游戏核心玩法。</li>
+</ul>
+<p>关闭个性化广告后，您仍可能看到广告，但广告的相关性会降低，展示频次可能增加。关闭个性化不影响广告展示与结算所必需的基础数据处理。</p>
+
+<h3>11.2 交叉推广</h3>
+<p>游戏内（如首页、加载页或终局页）可能展示<strong>本开发者其他游戏</strong>（例如 Cookie Factory、Line Go）的图标与链接。该展示由应用内的推广模块根据远程配置渲染，<strong>不会读取您的个人信息，也不会把您的信息共享给被推广的游戏</strong>。点击后您将跳转至 itch.io 等外部页面，跳转后的页面及其 Cookie 由该平台依其隐私政策处理。若您不希望看到推广内容，可忽略或关闭该入口，不影响游戏进程。</p>
+
+<h2 id="s12">12. 本地存储与同类技术</h2>
+<p>本应用不使用浏览器 Cookie 进行跨站跟踪。为保存进度与提升加载速度，我们会在您的设备上使用本地存储技术，包括：</p>
+<ul>
+  <li><strong>本地存档</strong>：保存当前人生的年份、四项状态（健康、心情、学识、人际）、工作与收入、家庭信息、历史人生档案、成就与收藏；</li>
+  <li><strong>偏好设置</strong>：保存倍速档位、自动播放节奏、界面模式（自动 / 网页 / 手机）与语言选择；</li>
+  <li><strong>配置缓存</strong>：缓存远程配置与公告，减少重复下载（含网页版的资源缓存）；</li>
+  <li><strong>统计标识</strong>：统计服务为区分设备而生成的随机匿名标识符。</li>
+</ul>
+<p>您可以通过清除应用数据或浏览器数据删除上述本地信息。删除后，游戏进度与历史人生将无法恢复。</p>
+
+<h2 id="s13">13. 本政策的更新</h2>
+<p>我们可能因功能调整、法律法规或监管要求变化而更新本政策。更新时，我们会在本页面发布新版本并标注更新日期与生效日期；对于<strong>处理目的、处理方式或信息类型发生重大变化</strong>的情形（例如正式开启广告或新增内购），我们将通过应用内弹窗、公告等方式显著提示，必要时重新征得您的同意。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>版本</th><th>日期</th><th>主要变更</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>v1.0</td><td>2026-11-07</td>
+      <td>首次发布</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>若您不同意更新后的政策，请停止使用本应用并卸载；您继续使用即表示接受更新后的政策。</p>
+
+<h2 id="s14">14. 联系我们</h2>
+<p>如您对本政策有任何疑问、意见或投诉，或希望行使上述个人信息权利，请通过以下方式联系我们：</p>
+<ul>
+  <li><strong>个人信息处理者</strong>：Marvin（Rebirth / 重生 开发者）</li>
+  <li><strong>电子邮箱</strong>：<a href="mailto:wuyou517@gmail.com">wuyou517@gmail.com</a></li>
+  <li><strong>响应时限</strong>：收到并核验您的请求后 15 个工作日内答复</li>
+</ul>
+<p>若您对我们的答复不满意，或认为我们的个人信息处理行为损害了您的合法权益，您可以向网信、电信、公安、市场监管等主管部门投诉举报，也可以向有管辖权的人民法院提起诉讼。</p>
+
+<footer>
+  <p>Rebirth（重生）隐私政策 · v1.0 · 2026 年 11 月 7 日生效</p>
+  <p>本页面为最新版本，历史版本可通过仓库提交记录查阅。<a href="./en.html">English version</a></p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -9,6 +9,8 @@
 | Line Go（English） | `linego/en.html` | https://marvin517.github.io/PrivacyPolicy/linego/en.html |
 | Cookie Factory（饼干工厂） | `cookiefactory/` | https://marvin517.github.io/PrivacyPolicy/cookiefactory/ |
 | Cookie Factory（English） | `cookiefactory/en.html` | https://marvin517.github.io/PrivacyPolicy/cookiefactory/en.html |
+| Rebirth（重生） | `rebirth/` | https://marvin517.github.io/PrivacyPolicy/rebirth/ |
+| Rebirth（English） | `rebirth/en.html` | https://marvin517.github.io/PrivacyPolicy/rebirth/en.html |
 
 ## 维护说明
 
