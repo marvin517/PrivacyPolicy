@@ -3,105 +3,684 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Marvin 旗下应用的隐私政策索引">
-<meta name="theme-color" content="#ffffff">
-<title>Privacy Policy - Index</title>
+<meta name="description" content="Marvin —— 独立游戏开发者。一个人，用 AI 把想法做成能玩的游戏：设计、代码、美术、音频、本地化、上线与运营。">
+<meta name="theme-color" content="#0a0c0f">
+<meta property="og:title" content="Marvin · 独立游戏开发者">
+<meta property="og:description" content="用 AI 放大一个人的能力。从玩法原型到上线运营，独立完成整条链路。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M16 46V18h6l10 13 10-13h6v28h-6V31l-10 12-10-12v15z' fill='%23fff'/%3E%3C/svg%3E">
+<title>Marvin · 独立游戏开发者</title>
 <style>
   :root{
-    --bg:#ffffff;
-    --bg-soft:#f6f7f9;
-    --text:#1c1f23;
-    --text-soft:#5a6169;
-    --line:#e4e7eb;
-    --accent:#1f6feb;
-    --accent-soft:#eef4ff;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#14171a;
-      --bg-soft:#1c2024;
-      --text:#e8eaed;
-      --text-soft:#a3abb4;
-      --line:#2c3238;
-      --accent:#6aa8ff;
-      --accent-soft:#1b2733;
-    }
+    --bg:#0a0c0f;
+    --panel:#11151a;
+    --panel-2:#151a21;
+    --line:rgba(255,255,255,.09);
+    --line-strong:rgba(255,255,255,.16);
+    --text:#e9edf2;
+    --muted:#9aa4b1;
+    --dim:#6c7683;
+    --violet:#8b5cf6;
+    --cyan:#22d3ee;
+    --amber:#f5b455;
+    --radius:16px;
   }
   *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
   body{
     margin:0;
     background:var(--bg);
     color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
     font-size:16px;
-    line-height:1.8;
+    line-height:1.75;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
-  .wrap{max-width:680px;margin:0 auto;padding:64px 22px 90px;}
-  h1{font-size:24px;margin:0 0 8px;letter-spacing:-.3px;}
-  .sub{color:var(--text-soft);font-size:15px;margin:0 0 36px;}
-  ul.apps{list-style:none;padding:0;margin:0;}
-  ul.apps li{
-    background:var(--bg-soft);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:18px 20px;
-    margin:14px 0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:14px;
-    flex-wrap:wrap;
+  ::selection{background:rgba(139,92,246,.35);color:#fff;}
+
+  /* ---------- 背景光晕 + 网格 ---------- */
+  .glow{
+    position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(900px 520px at 12% -12%, rgba(139,92,246,.26), transparent 62%),
+      radial-gradient(820px 480px at 88% -6%, rgba(34,211,238,.16), transparent 62%),
+      radial-gradient(760px 620px at 50% 112%, rgba(245,180,85,.07), transparent 62%);
   }
-  .app{font-weight:600;}
-  .app small{display:block;font-weight:400;color:var(--text-soft);font-size:13px;margin-top:2px;}
-  .links{display:flex;gap:8px;}
-  .links a{
-    text-decoration:none;
-    color:var(--accent);
-    border:1px solid var(--accent);
-    border-radius:999px;
-    padding:4px 14px;
-    font-size:13.5px;
+  .grid{
+    position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(circle at 50% 0%, #000 0%, transparent 72%);
+    mask-image:radial-gradient(circle at 50% 0%, #000 0%, transparent 72%);
+  }
+
+  /* ---------- 布局 ---------- */
+  .wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- 导航 ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:20;
+    backdrop-filter:saturate(150%) blur(14px);
+    -webkit-backdrop-filter:saturate(150%) blur(14px);
+    background:rgba(10,12,15,.62);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  header.nav.stuck{border-bottom-color:var(--line);background:rgba(10,12,15,.86);}
+  .nav-inner{
+    max-width:960px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:9px;
+    font-weight:700;font-size:15.5px;letter-spacing:-.01em;
+    color:var(--text);text-decoration:none;
+  }
+  .brand .mark{
+    width:24px;height:24px;border-radius:7px;flex:none;
+    background:linear-gradient(135deg,var(--violet),var(--cyan));
+    display:grid;place-items:center;
+    font-size:12px;font-weight:800;color:#0a0c0f;
+    box-shadow:0 0 0 1px rgba(255,255,255,.1), 0 4px 14px rgba(139,92,246,.35);
+  }
+  nav.links{display:flex;gap:4px;flex-wrap:wrap;}
+  nav.links a{
+    color:var(--muted);text-decoration:none;font-size:13.5px;
+    padding:6px 11px;border-radius:999px;
+    transition:color .18s ease, background .18s ease;
     white-space:nowrap;
   }
-  .links a:hover{background:var(--accent-soft);}
-  footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;color:var(--text-soft);font-size:13.5px;}
-  a.mail{color:var(--text-soft);}
+  nav.links a:hover{color:var(--text);background:rgba(255,255,255,.06);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:clamp(56px,10vw,110px) 0 clamp(40px,6vw,64px);}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+    color:#c6cbd4;
+    background:rgba(255,255,255,.045);
+    border:1px solid var(--line);
+    border-radius:999px;padding:6px 14px 6px 11px;
+    margin:0 0 22px;
+  }
+  .dot-live{
+    width:6px;height:6px;border-radius:50%;background:#4ade80;flex:none;
+    box-shadow:0 0 0 0 rgba(74,222,128,.7);
+    animation:beat 2.4s ease-out infinite;
+  }
+  @keyframes beat{
+    0%{box-shadow:0 0 0 0 rgba(74,222,128,.6);}
+    70%{box-shadow:0 0 0 7px rgba(74,222,128,0);}
+    100%{box-shadow:0 0 0 0 rgba(74,222,128,0);}
+  }
+  h1.name{
+    margin:0;
+    font-size:clamp(58px,15vw,132px);
+    line-height:.92;
+    font-weight:800;
+    letter-spacing:-.045em;
+    background:linear-gradient(96deg,#ffffff 8%,#d7caff 44%,#9feaf8 76%,#7dd3fc 100%);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    padding-bottom:.06em;
+  }
+  .tagline{
+    margin:18px 0 0;
+    font-size:clamp(19px,3.4vw,26px);
+    font-weight:600;letter-spacing:-.01em;
+    color:#eef1f6;
+  }
+  .tagline em{
+    font-style:normal;
+    background:linear-gradient(90deg,var(--violet),var(--cyan));
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+  }
+  .lede{
+    max-width:600px;margin:20px 0 0;
+    color:var(--muted);font-size:16px;line-height:1.85;
+  }
+  .lede strong{color:#dfe5ec;font-weight:600;}
+
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    text-decoration:none;font-size:14.5px;font-weight:600;
+    padding:11px 20px;border-radius:999px;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  }
+  .btn-primary{
+    color:#0a0c0f;
+    background:linear-gradient(135deg,#c4b5fd,#8b5cf6 45%,#22d3ee);
+    box-shadow:0 8px 26px rgba(139,92,246,.32);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(139,92,246,.42);}
+  .btn-ghost{
+    color:#dce2ea;background:rgba(255,255,255,.04);border:1px solid var(--line-strong);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px);}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1px;margin-top:clamp(38px,6vw,56px);
+    background:var(--line);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;
+  }
+  .stat{background:rgba(17,21,26,.72);padding:18px 20px;}
+  .stat b{display:block;font-size:22px;font-weight:700;letter-spacing:-.02em;}
+  .stat span{display:block;font-size:12.5px;color:var(--dim);margin-top:2px;letter-spacing:.02em;}
+
+  /* ---------- 通用 section ---------- */
+  section{padding:clamp(56px,9vw,88px) 0;position:relative;}
+  .sec-head{margin-bottom:clamp(28px,4vw,40px);}
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--dim);margin:0 0 12px;font-weight:600;
+  }
+  .eyebrow::before{
+    content:"";width:22px;height:1px;flex:none;
+    background:linear-gradient(90deg,var(--violet),transparent);
+  }
+  h2{
+    margin:0;font-size:clamp(24px,4.2vw,34px);
+    letter-spacing:-.025em;font-weight:700;line-height:1.25;
+  }
+  h2 + p.sec-sub{margin:12px 0 0;color:var(--muted);max-width:620px;font-size:15.5px;}
+
+  /* ---------- 游戏 ---------- */
+  .games{display:grid;gap:18px;}
+  .card{
+    position:relative;
+    display:grid;grid-template-columns:200px 1fr;
+    background:linear-gradient(180deg,rgba(21,26,33,.92),rgba(16,20,25,.92));
+    border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;
+    transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover{
+    border-color:var(--line-strong);
+    transform:translateY(-3px);
+    box-shadow:0 18px 40px -18px rgba(0,0,0,.9), 0 0 0 1px rgba(139,92,246,.12);
+  }
+  .cover{
+    position:relative;min-height:150px;
+    display:grid;place-items:center;
+    border-right:1px solid var(--line);
+    overflow:hidden;
+  }
+  .cover svg{width:100%;height:100%;position:absolute;inset:0;}
+  .cover::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 20% 0%, rgba(255,255,255,.14), transparent 60%);
+    pointer-events:none;
+  }
+  .c1{background:linear-gradient(150deg,#1b2a4a,#2d1b4a 55%,#0f1b2e);}
+  .c2{background:linear-gradient(150deg,#3a2416,#4a2c14 50%,#1f1610);}
+  .c3{background:linear-gradient(150deg,#12262a,#1b1730 55%,#0d1a20);}
+
+  .card-body{padding:22px 24px;display:flex;flex-direction:column;gap:10px;}
+  .card-title{
+    display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+    margin:0;font-size:19px;font-weight:700;letter-spacing:-.015em;
+  }
+  .card-title small{
+    font-size:12.5px;color:var(--dim);font-weight:500;letter-spacing:0;
+  }
+  .card-desc{margin:0;color:var(--muted);font-size:14.5px;line-height:1.7;}
+  .card-foot{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    margin-top:auto;padding-top:6px;
+  }
+  .tag{
+    font-size:12px;color:#b9c1cc;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--line);
+    border-radius:999px;padding:3px 10px;
+    white-space:nowrap;
+  }
+  .pill-links{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;}
+  .pill{
+    font-size:12.5px;text-decoration:none;color:#cdd4de;
+    border:1px solid var(--line-strong);border-radius:999px;
+    padding:4px 12px;white-space:nowrap;
+    transition:background .18s ease,color .18s ease,border-color .18s ease;
+  }
+  .pill:hover{background:rgba(139,92,246,.16);border-color:rgba(139,92,246,.5);color:#fff;}
+
+  /* ---------- AI 工作流 ---------- */
+  .flow{position:relative;margin:0;padding:0;list-style:none;}
+  .flow::before{
+    content:"";position:absolute;left:15px;top:10px;bottom:10px;width:1px;
+    background:linear-gradient(180deg,var(--violet),rgba(34,211,238,.5),transparent);
+    opacity:.5;
+  }
+  .flow li{
+    position:relative;padding:0 0 30px 52px;
+  }
+  .flow li:last-child{padding-bottom:0;}
+  .flow li::before{
+    content:attr(data-step);
+    position:absolute;left:0;top:-2px;
+    width:31px;height:31px;border-radius:50%;
+    display:grid;place-items:center;
+    font-size:12px;font-weight:700;color:#cfd6e0;
+    background:#12161c;
+    border:1px solid var(--line-strong);
+    font-variant-numeric:tabular-nums;
+  }
+  .flow li:hover::before{
+    color:#fff;border-color:rgba(139,92,246,.65);
+    box-shadow:0 0 0 3px rgba(139,92,246,.14);
+  }
+  .flow h3{
+    margin:0 0 6px;font-size:16px;font-weight:650;letter-spacing:-.01em;
+    display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  }
+  .flow h3 em{
+    font-style:normal;font-size:11.5px;font-weight:500;color:var(--dim);
+    letter-spacing:.04em;text-transform:uppercase;
+  }
+  .flow p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.78;max-width:640px;}
+  .flow p b{color:#dde3ea;font-weight:600;}
+
+  /* ---------- 原则 ---------- */
+  .principles{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+    margin-top:34px;
+  }
+  .principle{
+    background:rgba(17,21,26,.7);
+    border:1px solid var(--line);border-radius:14px;padding:20px;
+  }
+  .principle .k{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--dim);font-weight:600;
+  }
+  .principle h4{margin:8px 0 8px;font-size:15px;font-weight:650;letter-spacing:-.01em;}
+  .principle p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.72;}
+
+  /* ---------- 现在 ---------- */
+  .now{
+    display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;
+    background:
+      radial-gradient(600px 200px at 0% 0%, rgba(139,92,246,.14), transparent 70%),
+      rgba(17,21,26,.72);
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 28px;
+  }
+  .now .k{
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--dim);font-weight:600;flex:none;padding-top:4px;
+  }
+  .now p{margin:0;font-size:15px;color:#dbe2ea;max-width:640px;}
+  .now p small{display:block;color:var(--muted);font-size:13.5px;margin-top:6px;}
+
+  /* ---------- 隐私政策 ---------- */
+  .policy-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+  .policy-list li{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    background:rgba(255,255,255,.022);
+    border:1px solid var(--line);border-radius:12px;
+    padding:14px 18px;
+    transition:background .18s ease,border-color .18s ease;
+  }
+  .policy-list li:hover{background:rgba(255,255,255,.045);border-color:var(--line-strong);}
+  .policy-list .nm{font-size:14.5px;font-weight:600;}
+  .policy-list .nm small{display:block;font-weight:400;color:var(--dim);font-size:12.5px;margin-top:1px;}
+  .policy-list .pill-links{margin-left:auto;}
+
+  /* ---------- 页脚 ---------- */
+  footer{
+    position:relative;z-index:1;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+  }
+  .foot-inner{
+    max-width:960px;margin:0 auto;padding:36px 24px 56px;
+    display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;
+    color:var(--dim);font-size:13.5px;
+  }
+  .foot-inner a{color:var(--muted);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.14);}
+  .foot-inner a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4);}
+  .foot-right{display:flex;gap:18px;flex-wrap:wrap;}
+
+  /* ---------- 入场动画 ---------- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s cubic-bezier(.22,.7,.3,1);}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .dot-live{animation:none;}
+    .btn:hover,.card:hover{transform:none;}
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 18px;}
+    .nav-inner{padding:12px 18px;}
+    nav.links a{font-size:12.5px;padding:5px 8px;}
+    .stats{grid-template-columns:1fr;gap:0;}
+    .stat{display:flex;align-items:baseline;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line);}
+    .stat:last-child{border-bottom:none;}
+    .stat b{font-size:18px;}
+    .stat span{margin-top:0;}
+    .card{grid-template-columns:1fr;}
+    .cover{min-height:132px;border-right:none;border-bottom:1px solid var(--line);}
+    .principles{grid-template-columns:1fr;}
+    .flow li{padding-left:44px;}
+    .flow::before{left:13px;}
+    .flow li::before{width:27px;height:27px;font-size:11px;}
+    .foot-inner{padding:28px 18px 44px;flex-direction:column;gap:14px;}
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>隐私政策 · Privacy Policy</h1>
-  <p class="sub">以下是我们提供各应用的隐私政策页面。顶层不再承载具体应用的政策，请从下方列表进入对应应用。</p>
+<div class="glow" aria-hidden="true"></div>
+<div class="grid" aria-hidden="true"></div>
 
-  <ul class="apps">
-    <li>
-      <div class="app">Line Go（一线牵）<small>微信小游戏 · Android</small></div>
-      <div class="links">
-        <a href="./linego/" hreflang="zh-CN">简体中文</a>
-        <a href="./linego/en.html" hreflang="en">English</a>
-      </div>
-    </li>
-    <li>
-      <div class="app">Cookie Factory（饼干工厂）<small>Android · 网页版</small></div>
-      <div class="links">
-        <a href="./cookiefactory/" hreflang="zh-CN">简体中文</a>
-        <a href="./cookiefactory/en.html" hreflang="en">English</a>
-      </div>
-    </li>
-    <li>
-      <div class="app">Rebirth（重生）<small>Android · 网页版</small></div>
-      <div class="links">
-        <a href="./rebirth/" hreflang="zh-CN">简体中文</a>
-        <a href="./rebirth/en.html" hreflang="en">English</a>
-      </div>
-    </li>
-  </ul>
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Marvin 首页">
+      <span class="mark" aria-hidden="true">M</span>Marvin
+    </a>
+    <nav class="links">
+      <a href="#games">作品</a>
+      <a href="#ai">AI 工作流</a>
+      <a href="#about">关于</a>
+      <a href="#privacy">隐私政策</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>
-    <p>如有任何隐私相关问题，请联系：<a class="mail" href="mailto:wuyou517@gmail.com">wuyou517@gmail.com</a></p>
-  </footer>
-</div>
+<main class="wrap" id="top">
+
+  <!-- Hero -->
+  <section class="hero" style="padding-top:clamp(48px,8vw,96px)">
+    <p class="badge"><span class="dot-live" aria-hidden="true"></span>独立游戏开发者 · 一人团队</p>
+    <h1 class="name">Marvin</h1>
+    <p class="tagline">用 AI 放大一个人的能力，<em>把想法做成能玩的游戏。</em></p>
+    <p class="lede">
+      我做独立游戏，一个人跑完整条链路：<strong>玩法设计、程序、美术、音频、本地化、上线与运营</strong>。
+      AI 不是替我按下按钮的工具，而是让我敢一个人接下整个项目的队友——它负责把量堆起来，我负责判断什么值得做。
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#games">看看我的作品</a>
+      <a class="btn btn-ghost" href="#ai">AI 是怎么参与的</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>3 款</b><span>已发布作品</span></div>
+      <div class="stat"><b>1 人</b><span>从创意到上线</span></div>
+      <div class="stat"><b>全流程</b><span>AI 协作开发</span></div>
+    </div>
+  </section>
+
+  <!-- 作品 -->
+  <section id="games">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Selected Works</p>
+      <h2>做过的游戏</h2>
+      <p class="sec-sub">都是小体量的作品，但每一款都完整走过了从原型、打磨到上架的全过程。这也是我理解游戏的方式：先做出来，再做好。</p>
+    </div>
+
+    <div class="games">
+      <article class="card reveal">
+        <div class="cover c1" aria-hidden="true">
+          <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#8fb4ff" stroke-opacity=".55" stroke-width="1.4">
+              <path d="M30 110 L74 62 L120 92 L168 40"/>
+              <path d="M30 110 L96 120 L168 40"/>
+              <path d="M74 62 L96 120"/>
+            </g>
+            <g fill="#dbe7ff">
+              <circle cx="30" cy="110" r="4.5"/><circle cx="74" cy="62" r="5.5"/>
+              <circle cx="120" cy="92" r="4"/><circle cx="168" cy="40" r="6"/>
+              <circle cx="96" cy="120" r="3.5"/>
+            </g>
+            <g fill="#8fb4ff" fill-opacity=".25">
+              <circle cx="168" cy="40" r="13"/><circle cx="74" cy="62" r="11"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Line Go <small>一线牵</small></h3>
+          <p class="card-desc">把散落的节点连成一条不断裂的线。看似简单的一笔，落笔之后才开始考验你的耐心与判断——这是一款关于「连接」的解谜小游戏。</p>
+          <div class="card-foot">
+            <span class="tag">微信小游戏</span>
+            <span class="tag">Android</span>
+            <div class="pill-links">
+              <a class="pill" href="./linego/">隐私政策</a>
+              <a class="pill" href="./linego/en.html" hreflang="en">EN</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="cover c2" aria-hidden="true">
+          <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#f0b264" fill-opacity=".85">
+              <circle cx="72" cy="60" r="19"/><circle cx="124" cy="52" r="13"/>
+              <circle cx="102" cy="98" r="16"/><circle cx="148" cy="94" r="10"/>
+              <circle cx="56" cy="104" r="9"/>
+            </g>
+            <g fill="#3a2416">
+              <circle cx="66" cy="54" r="2.6"/><circle cx="79" cy="63" r="2.2"/><circle cx="68" cy="70" r="2.4"/>
+              <circle cx="98" cy="92" r="2.4"/><circle cx="108" cy="102" r="2"/><circle cx="95" cy="105" r="1.8"/>
+              <circle cx="120" cy="48" r="2"/><circle cx="129" cy="56" r="1.7"/>
+            </g>
+            <path d="M160 30 L172 18 M160 18 L172 30" stroke="#f5b455" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="38" cy="42" r="2" fill="#f5b455" fill-opacity=".5"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Cookie Factory <small>饼干工厂</small></h3>
+          <p class="card-desc">从一台烤箱开始，把面团、糖霜和一点点贪心变成流水线。经营与放置的混合玩法，适合在通勤路上点开，然后不知不觉坐过站。</p>
+          <div class="card-foot">
+            <span class="tag">Android</span>
+            <span class="tag">网页版</span>
+            <div class="pill-links">
+              <a class="pill" href="./cookiefactory/">隐私政策</a>
+              <a class="pill" href="./cookiefactory/en.html" hreflang="en">EN</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="cover c3" aria-hidden="true">
+          <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#6ee7f0" stroke-opacity=".5" stroke-width="1.4" fill="none">
+              <path d="M60 118 A40 40 0 0 1 140 118"/>
+              <path d="M74 118 A26 26 0 0 1 126 118"/>
+              <path d="M88 118 A12 12 0 0 1 112 118"/>
+            </g>
+            <circle cx="100" cy="118" r="5" fill="#c9fbff"/>
+            <g stroke="#a78bfa" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round">
+              <path d="M100 96 L100 44"/><path d="M88 56 L100 42 L112 56"/>
+            </g>
+            <g fill="#e9edf2" fill-opacity=".7">
+              <circle cx="52" cy="48" r="1.8"/><circle cx="150" cy="62" r="1.5"/>
+              <circle cx="132" cy="34" r="1.2"/><circle cx="68" cy="30" r="1.4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Rebirth <small>重生</small></h3>
+          <p class="card-desc">每一轮结束都不是终点，而是下一次出发的起点。围绕着「重来」这个概念做的轻量玩法实验，也是我个人最喜欢的一款。</p>
+          <div class="card-foot">
+            <span class="tag">Android</span>
+            <span class="tag">网页版</span>
+            <div class="pill-links">
+              <a class="pill" href="./rebirth/">隐私政策</a>
+              <a class="pill" href="./rebirth/en.html" hreflang="en">EN</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- AI 工作流 -->
+  <section id="ai">
+    <div class="sec-head reveal">
+      <p class="eyebrow">How I Work</p>
+      <h2>用 AI 把自己武装起来</h2>
+      <p class="sec-sub">一个人做游戏，最难的不是「不会」，而是「来不及」。我的解法是把整条生产链拆开，让 AI 承担其中可以被放大的部分，我守住那些不能被替代的判断。</p>
+    </div>
+
+    <ol class="flow">
+      <li data-step="01" class="reveal">
+        <h3>概念验证 <em>Concept</em></h3>
+        <p>先用 AI 做玩法拆解、竞品扫描和一句话卖点打磨，把「我觉得好玩」变成<b>可以被质疑的假设</b>。这一阶段不写代码，只做减法。</p>
+      </li>
+      <li data-step="02" class="reveal">
+        <h3>能跑的原型 <em>Prototype</em></h3>
+        <p>让它先交出<b>最丑但能玩</b>的版本。手感、节奏、反馈延迟才是要验证的东西，美术可以晚一点再漂亮。</p>
+      </li>
+      <li data-step="03" class="reveal">
+        <h3>代码与工具链 <em>Code</em></h3>
+        <p>样板逻辑、状态管理、跨平台适配、构建脚本这些「必须有但不产生乐趣」的部分交给 AI；<b>架构和核心手感我自己写</b>，因为那决定游戏像不像我做的。</p>
+      </li>
+      <li data-step="04" class="reveal">
+        <h3>美术与音频 <em>Art</em></h3>
+        <p>用提示词快速迭代素材方向，再统一风格、手工修整，确保整款游戏是<b>同一张脸</b>。AI 出草稿，我做最后一道审美关。</p>
+      </li>
+      <li data-step="05" class="reveal">
+        <h3>本地化与合规 <em>Ship</em></h3>
+        <p>多语言文案、商店描述、隐私政策一起产出。上线前的琐事最容易拖垮个人开发者，这部分我用 AI 压到最短。</p>
+      </li>
+      <li data-step="06" class="reveal">
+        <h3>上线与运营 <em>Live</em></h3>
+        <p>发布不是终点。用 AI 读数据、写更新日志、整理玩家反馈，把「上线之后」这件长期的事也一个人扛下来。</p>
+      </li>
+    </ol>
+
+    <div class="principles reveal">
+      <div class="principle">
+        <p class="k">Principle 01</p>
+        <h4>AI 做量，我做判断</h4>
+        <p>生成一百个方案很便宜，决定用哪一个才是我的工作。</p>
+      </div>
+      <div class="principle">
+        <p class="k">Principle 02</p>
+        <h4>手感必须亲手调</h4>
+        <p>数值、动画曲线、音效时机，这些只能靠反复玩、反复改。</p>
+      </div>
+      <div class="principle">
+        <p class="k">Principle 03</p>
+        <h4>先发布，再完美</h4>
+        <p>完成度来自上线后的迭代，而不是无限延期的打磨。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about">
+    <div class="sec-head reveal">
+      <p class="eyebrow">About</p>
+      <h2>关于我</h2>
+    </div>
+    <div class="reveal" style="max-width:660px;color:var(--muted)">
+      <p style="margin-top:0">
+        我是 Marvin，一名独立游戏开发者。没有团队、没有发行商，也不太擅长把作品讲得天花乱坠——
+        所以我把力气都花在「做出来」上。
+      </p>
+      <p>
+        我喜欢小体量、机制清晰、玩完会想一会儿的游戏。也相信 AI 这一代工具真正改变的，
+        是让一个人能触及的项目规模：过去需要五个人的活，现在一个人加上合适的协作方式也能完成，
+        而且<b style="color:#dde3ea">做出来的东西仍然带着鲜明的个人印记</b>。
+      </p>
+      <p style="margin-bottom:0">
+        这个网站会持续更新我的作品和开发过程。如果你也在一个人做游戏，或者想聊聊 AI 怎么参与创作，
+        欢迎写信给我。
+      </p>
+    </div>
+
+    <div class="now reveal" style="margin-top:32px">
+      <p class="k">Now</p>
+      <p>
+        正在打磨下一款作品，同时把这套「一人 + AI」的开发流程整理成可复用的方法。
+        <small>新作细节会在合适的时候放出来，先不剧透。</small>
+      </p>
+    </div>
+  </section>
+
+  <!-- 隐私政策 -->
+  <section id="privacy">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Legal</p>
+      <h2>隐私政策</h2>
+      <p class="sec-sub">我所有上架应用的隐私政策都在这里。每个应用单独一份，中英文各一版。</p>
+    </div>
+
+    <ul class="policy-list reveal">
+      <li>
+        <div class="nm">Line Go（一线牵）<small>微信小游戏 · Android</small></div>
+        <div class="pill-links">
+          <a class="pill" href="./linego/" hreflang="zh-CN">简体中文</a>
+          <a class="pill" href="./linego/en.html" hreflang="en">English</a>
+        </div>
+      </li>
+      <li>
+        <div class="nm">Cookie Factory（饼干工厂）<small>Android · 网页版</small></div>
+        <div class="pill-links">
+          <a class="pill" href="./cookiefactory/" hreflang="zh-CN">简体中文</a>
+          <a class="pill" href="./cookiefactory/en.html" hreflang="en">English</a>
+        </div>
+      </li>
+      <li>
+        <div class="nm">Rebirth（重生）<small>Android · 网页版</small></div>
+        <div class="pill-links">
+          <a class="pill" href="./rebirth/" hreflang="zh-CN">简体中文</a>
+          <a class="pill" href="./rebirth/en.html" hreflang="en">English</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div style="color:#c9d1da;font-weight:600;margin-bottom:6px">Marvin · 独立游戏开发者</div>
+      <div>用 AI 放大一个人的能力。</div>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:wuyou517@gmail.com">wuyou517@gmail.com</a>
+      <a href="#privacy">隐私政策</a>
+      <a href="#top">回到顶部 ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 导航栏滚动后加深
+  var nav = document.getElementById('siteNav');
+  var onScroll = function(){ nav.classList.toggle('stuck', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // 滚动入场
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    items.forEach(function(el, i){
+      el.style.transitionDelay = (Math.min(i % 3, 3) * 70) + 'ms';
+      io.observe(el);
+    });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
 </body>
 </html>
