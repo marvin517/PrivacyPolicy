@@ -5,6 +5,8 @@
 | 应用 | 路径 | 地址 |
 |---|---|---|
 | 主页（个人介绍） | `index.html` | https://marvin517.github.io/PrivacyPolicy/ |
+| Arrow Escape | `arrowescape/` | https://marvin517.github.io/PrivacyPolicy/arrowescape/ |
+| Arrow Escape（English） | `arrowescape/en.html` | https://marvin517.github.io/PrivacyPolicy/arrowescape/en.html |
 | Line Go（一线牵） | `linego/` | https://marvin517.github.io/PrivacyPolicy/linego/ |
 | Line Go（English） | `linego/en.html` | https://marvin517.github.io/PrivacyPolicy/linego/en.html |
 | Cookie Factory（饼干工厂） | `cookiefactory/` | https://marvin517.github.io/PrivacyPolicy/cookiefactory/ |
