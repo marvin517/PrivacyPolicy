@@ -5,6 +5,8 @@
 | 应用 | 路径 | 地址 |
 |---|---|---|
 | 主页（个人介绍） | `index.html` | https://marvin517.github.io/PrivacyPolicy/ |
+| Huehive（色巢） | `huehive/` | https://marvin517.github.io/PrivacyPolicy/huehive/ |
+| Huehive（English） | `huehive/en.html` | https://marvin517.github.io/PrivacyPolicy/huehive/en.html |
 | Crazy Brick（狂野砖块） | `crazybrick/` | https://marvin517.github.io/PrivacyPolicy/crazybrick/ |
 | Crazy Brick（English） | `crazybrick/en.html` | https://marvin517.github.io/PrivacyPolicy/crazybrick/en.html |
 | Arrow Escape | `arrowescape/` | https://marvin517.github.io/PrivacyPolicy/arrowescape/ |

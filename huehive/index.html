@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Huehive（色巢）隐私政策 - 说明游戏会处理哪些数据、为什么处理，以及你有哪些选择。离线可玩，不设账号，存档只保存在本地。">
+<meta name="theme-color" content="#ffffff">
+<title>隐私政策 - Huehive（色巢）</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f7f9;
+    --text:#1c1f23;
+    --text-soft:#5a6169;
+    --line:#e4e7eb;
+    --accent:#1f6feb;
+    --accent-soft:#eef4ff;
+    --warn-bg:#fff8e6;
+    --warn-line:#f0c96a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171a;
+      --bg-soft:#1c2024;
+      --text:#e8eaed;
+      --text-soft:#a3abb4;
+      --line:#2c3238;
+      --accent:#6aa8ff;
+      --accent-soft:#1b2733;
+      --warn-bg:#2a2418;
+      --warn-line:#6d5a2a;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:40px 22px 90px;}
+
+  header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px;}
+  .lang{display:flex;gap:6px;font-size:13px;margin-bottom:18px;}
+  .lang a,.lang span{padding:5px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--text-soft);}
+  .lang .on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:600;}
+
+  h1{font-size:27px;line-height:1.35;margin:0 0 14px;letter-spacing:-.3px;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-soft);}
+  .meta span{background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:3px 10px;}
+
+  nav.toc{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:28px 0 6px;}
+  nav.toc p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--text-soft);text-transform:uppercase;}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px;font-size:14.5px;}
+  nav.toc li{margin:5px 0;break-inside:avoid;}
+  nav.toc a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
+  nav.toc a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  @media (max-width:620px){nav.toc ol{columns:1;}}
+
+  h2{font-size:20px;margin:44px 0 14px;padding-top:16px;border-top:1px solid var(--line);letter-spacing:-.2px;}
+  h3{font-size:16.5px;margin:26px 0 8px;color:var(--text);}
+  p{margin:12px 0;}
+  ul,ol{padding-left:22px;margin:12px 0;}
+  li{margin:7px 0;}
+  a{color:var(--accent);}
+  strong{font-weight:600;}
+  .muted{color:var(--text-soft);font-size:14px;}
+
+  .note{
+    background:var(--warn-bg);
+    border-left:3px solid var(--warn-line);
+    border-radius:0 8px 8px 0;
+    padding:14px 18px;
+    margin:20px 0;
+    font-size:15px;
+  }
+  .note strong:first-child{display:block;margin-bottom:4px;}
+
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.65;}
+  th{background:var(--bg-soft);font-weight:600;white-space:nowrap;}
+  td a{word-break:break-all;}
+
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-soft);}
+  footer p{margin:6px 0;}
+
+  @media print{
+    body{font-size:11pt;}
+    nav.toc{display:none;}
+    h2{page-break-after:avoid;}
+    .table-scroll{overflow:visible;}
+    table{min-width:0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="lang"><span class="on">简体中文</span><a href="./en.html" hreflang="en">English</a></div>
+  <h1>Huehive（色巢）隐私政策</h1>
+  <div class="meta">
+    <span>版本 v1.0</span>
+    <span>更新日期：2026 年 11 月 12 日</span>
+    <span>生效日期：2026 年 11 月 12 日</span>
+    <span>适用：Android 版 / 网页版</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <p>目录</p>
+  <ol>
+    <li><a href="#s1">本政策的适用范围</a></li>
+    <li><a href="#s2">我们不收集什么</a></li>
+    <li><a href="#s3">联网时会发生什么</a></li>
+    <li><a href="#s4">第三方</a></li>
+    <li><a href="#s5">你的选择</a></li>
+    <li><a href="#s6">儿童</a></li>
+    <li><a href="#s7">数据安全与留存</a></li>
+    <li><a href="#s8">本政策的变更</a></li>
+    <li><a href="#s9">联系我们</a></li>
+  </ol>
+</nav>
+
+<h2 style="border-top:none;padding-top:8px;">导言</h2>
+<p><strong>Huehive</strong>（中文名「色巢」，以下简称「本应用」）是一款休闲解谜游戏：点击底部的颜色筹码向队列下单，工蚁从巢口出发，按队列把色粒一颗颗搬进画框，填满整幅像素画即通关；关卡只有 1–3 星与金币收益，<strong>没有失败</strong>。本应用由独立开发者 <strong>Marvin</strong>（以下简称「我们」）开发与发行，目前以 <strong>Android 版本</strong>（经 Google Play 分发）和<strong>网页版</strong>（经 itch.io 等平台在浏览器中运行）两种形式向您提供，支持简体中文与英文。</p>
+<p>本政策说明本应用会处理哪些数据、为什么处理，以及你有哪些选择。结论很简单：<strong>本应用不建立账号体系、不收集个人信息</strong>，游戏进度只存在于你自己的设备上。</p>
+
+<div class="note">
+  <strong>三句话了解本政策</strong>
+  ① 没有账号、没有登录，我们不索取姓名、邮箱、电话号码、通讯录、照片、麦克风、摄像头或精确位置；<br>
+  ② 存档（关卡进度与星级、金币、升级卡等级、设置与音效开关）只保存在你的设备本地，<strong>我们不上传，也无法读取</strong>；<br>
+  ③ 当前版本<strong>不含广告、内购与第三方统计分析</strong>；唯一的联网请求，是从 CDN 获取远程配置与内容更新。
+</div>
+
+<h2 id="s1">1. 本政策的适用范围</h2>
+<p><strong>1.1 适用产品</strong>：本政策适用于「Huehive（色巢）」的 Android 版本（通过 Google Play 分发）以及网页版本（通过 itch.io 等平台在浏览器中运行）。不同渠道版本的功能可能存在差异，具体以您实际使用的版本为准。</p>
+<p><strong>1.2 不适用范围</strong>：分发平台（如 itch.io、Google Play）自身的账号、支付、统计与日志行为，适用该平台自身的隐私政策，<strong>不适用本政策</strong>。</p>
+<p><strong>1.3 个人信息处理者</strong>：Marvin（个人开发者），联系方式见第 9 条。</p>
+
+<h2 id="s2">2. 我们不收集什么</h2>
+<ul>
+  <li>没有账号系统，不要求注册或登录。</li>
+  <li>不索取姓名、邮箱、电话号码、通讯录、照片、麦克风、摄像头或精确位置。</li>
+  <li>不读取或上传你的<strong>游戏存档</strong>：关卡进度与星级、金币、升级卡等级（蚂蚁数量 / 移动速度 / 队列槽 / 金币收益）、语言与音效设置，全部保存在设备本地存储（Android 版为应用私有数据目录，网页版为浏览器本地存储）。卸载应用或清除浏览器数据即删除。</li>
+  <li>不读取设备上的其他应用，也不收集广告标识符。</li>
+</ul>
+
+<h3>2.1 存档里有什么、保存在哪里</h3>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>存档内容</th><th>保存位置</th><th>是否上传</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>关卡进度、星级与解锁状态</td><td>设备本地（应用私有目录 / 浏览器本地存储）</td><td>否</td></tr>
+    <tr><td>金币与升级卡等级</td><td>设备本地（同上）</td><td>否</td></tr>
+    <tr><td>语言、音效与音乐开关等设置</td><td>设备本地（同上）</td><td>否</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">上述内容构成完整的存档。我们不在任何服务器上保存副本，因此也无法访问、导出或恢复你的进度。</p>
+
+<h3>2.2 关于邮件联系</h3>
+<p>若您主动通过邮件联系我们，我们会收到您的邮箱地址与您填写的邮件内容，仅用于答复您的问题，不会用于其他用途，也不会加入任何营销名单。除此之外，本应用<strong>不设置任何信息填写入口</strong>。</p>
+
+<h2 id="s3">3. 联网时会发生什么</h2>
+<ul>
+  <li>游戏本体<strong>完全离线可玩</strong>，不需要网络。</li>
+  <li>启动时游戏会从 CDN（jsDelivr）请求<strong>公开的远程配置文件</strong>，用于版本与参数下发；检测到新版本时，会按需下载<strong>内容更新资源</strong>（例如关卡与文案的调整）。这些请求不携带账号、存档或设备标识符；CDN 提供方会按其自身政策记录常规请求日志（如 IP 地址、时间、User-Agent）。</li>
+  <li>当前版本<strong>不包含广告、内购与第三方统计分析</strong>。</li>
+</ul>
+<p class="muted">这些请求仅用于获取公开配置与更新内容，我们不会读取、接收或保存 CDN 的访问日志。若请求失败（例如断网或被拦截），游戏会自动使用设备上已缓存或内置的默认内容，不影响正常游玩。</p>
+
+<h2 id="s4">4. 第三方</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>服务</th><th>用途</th><th>涉及的信息</th><th>隐私政策</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>jsDelivr</td>
+      <td>配置分发与内容更新（CDN）</td>
+      <td>常规请求日志，如 IP 地址、时间、User-Agent；由 CDN 提供方按其自身政策处理</td>
+      <td><a href="https://www.jsdelivr.com/terms/privacy-policy" target="_blank" rel="noopener">jsdelivr.com/terms/privacy-policy</a></td>
+    </tr>
+    <tr>
+      <td>itch.io / Google Play</td>
+      <td>分发平台</td>
+      <td>由平台按其各自政策处理；<strong>我们不接触你的支付信息</strong></td>
+      <td><a href="https://itch.io/docs/legal/privacy-policy" target="_blank" rel="noopener">itch.io 隐私政策</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私政策</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><strong>我们不出售任何数据，也没有可出售的数据——游戏不产生个人数据。</strong>除上述情形外，我们不会向任何第三方共享、转让或公开披露你的信息；仅在法律法规、司法或行政机关强制要求时，才会依法配合。</p>
+
+<h2 id="s5">5. 你的选择</h2>
+<ul>
+  <li><strong>删除存档</strong>：在游戏内使用「重置进度」，或卸载应用 / 清除浏览器数据。</li>
+  <li><strong>阻止联网</strong>：断开网络不影响游玩，游戏会使用已缓存或内置的默认内容。</li>
+  <li><strong>欧洲经济区 / 英国 / 加州用户</strong>：由于游戏不收集个人数据，通常不存在需要访问或删除的记录；若你有疑问，可通过下方邮箱联系我们。</li>
+</ul>
+<p>行使上述选择不会导致任何功能受限或体验降级——因为这些数据本来就不在我们手里。</p>
+
+<h2 id="s6">6. 儿童</h2>
+<p>本游戏不面向 13 岁以下儿童，我们不会有意收集儿童信息。由于本应用不收集任何个人信息，也就不存在儿童个人信息的留存。若监护人认为我们以任何方式持有了相关信息，可通过第 9 条邮箱联系我们，我们将在核实后尽快处理。</p>
+
+<h2 id="s7">7. 数据安全与留存</h2>
+<ul>
+  <li>本应用<strong>不设账号体系，也没有存储个人数据的服务器</strong>，不存在包含你个人信息的数据库。</li>
+  <li>存档仅存在于你的设备上，随卸载应用或清除浏览器数据一并删除；我们不做云端备份、不导出、不复制。</li>
+  <li>配置与更新内容的分发通过 HTTPS 传输，防止内容在传输过程中被篡改。</li>
+  <li>邮件沟通记录仅保存至问题处理完毕；你可以随时要求我们删除相关邮件。</li>
+</ul>
+<p>我们采取上述做法的原因很直接：<strong>不收集，就不需要保护。</strong>这是本应用处理数据时的默认立场。</p>
+
+<h2 id="s8">8. 本政策的变更</h2>
+<p>若未来版本引入广告（如 Google AdMob）、内购、账号或匿名统计，本政策会在该版本发布前更新，并在商店页面注明。更新时我们会在本页面发布新版本并标注更新日期与生效日期；涉及处理目的、方式或信息类型重大变化时，我们会以显著方式提示，必要时重新征得您的同意。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>版本</th><th>日期</th><th>主要变更</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>v1.0</td><td>2026-11-12</td>
+      <td>首次发布</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>若您不同意更新后的政策，请停止使用本应用并卸载；继续使用即表示接受更新后的政策。</p>
+
+<h2 id="s9">9. 联系我们</h2>
+<p>如有疑问，请联系我们：</p>
+<ul>
+  <li><strong>开发者 / 个人信息处理者</strong>：Marvin（Huehive / 色巢 开发者）</li>
+  <li><strong>电子邮箱</strong>：<a href="mailto:wuyou517@gmail.com">wuyou517@gmail.com</a></li>
+  <li><strong>响应时限</strong>：收到并核验请求后 15 个工作日内答复</li>
+</ul>
+<p>若您认为我们的处理行为损害了您的合法权益，也可以向网信、电信、公安、市场监管等主管部门投诉举报，或向有管辖权的人民法院提起诉讼。</p>
+
+<footer>
+  <p>Huehive（色巢）隐私政策 · v1.0 · 2026 年 11 月 12 日生效</p>
+  <p>本页面为最新版本，历史版本可通过仓库提交记录查阅。<a href="./en.html" hreflang="en">English version</a></p>
+</footer>
+
+</div>
+</body>
+</html>
