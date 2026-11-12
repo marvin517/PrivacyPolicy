@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Crazy Brick（狂野砖块）隐私政策 - 说明我们如何收集、使用、存储和保护您的个人信息。">
+<meta name="theme-color" content="#ffffff">
+<title>隐私政策 - Crazy Brick（狂野砖块）</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f7f9;
+    --text:#1c1f23;
+    --text-soft:#5a6169;
+    --line:#e4e7eb;
+    --accent:#1f6feb;
+    --accent-soft:#eef4ff;
+    --warn-bg:#fff8e6;
+    --warn-line:#f0c96a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171a;
+      --bg-soft:#1c2024;
+      --text:#e8eaed;
+      --text-soft:#a3abb4;
+      --line:#2c3238;
+      --accent:#6aa8ff;
+      --accent-soft:#1b2733;
+      --warn-bg:#2a2418;
+      --warn-line:#6d5a2a;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:40px 22px 90px;}
+
+  header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px;}
+  .lang{display:flex;gap:6px;font-size:13px;margin-bottom:18px;}
+  .lang a,.lang span{padding:5px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--text-soft);}
+  .lang .on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:600;}
+
+  h1{font-size:27px;line-height:1.35;margin:0 0 14px;letter-spacing:-.3px;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-soft);}
+  .meta span{background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:3px 10px;}
+
+  nav.toc{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:28px 0 6px;}
+  nav.toc p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--text-soft);text-transform:uppercase;}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px;font-size:14.5px;}
+  nav.toc li{margin:5px 0;break-inside:avoid;}
+  nav.toc a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
+  nav.toc a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  @media (max-width:620px){nav.toc ol{columns:1;}}
+
+  h2{font-size:20px;margin:44px 0 14px;padding-top:16px;border-top:1px solid var(--line);letter-spacing:-.2px;}
+  h3{font-size:16.5px;margin:26px 0 8px;color:var(--text);}
+  p{margin:12px 0;}
+  ul,ol{padding-left:22px;margin:12px 0;}
+  li{margin:7px 0;}
+  a{color:var(--accent);}
+  strong{font-weight:600;}
+  .muted{color:var(--text-soft);font-size:14px;}
+
+  .note{
+    background:var(--warn-bg);
+    border-left:3px solid var(--warn-line);
+    border-radius:0 8px 8px 0;
+    padding:14px 18px;
+    margin:20px 0;
+    font-size:15px;
+  }
+  .note strong:first-child{display:block;margin-bottom:4px;}
+
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.65;}
+  th{background:var(--bg-soft);font-weight:600;white-space:nowrap;}
+  td a{word-break:break-all;}
+
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-soft);}
+  footer p{margin:6px 0;}
+
+  @media print{
+    body{font-size:11pt;}
+    nav.toc{display:none;}
+    h2{page-break-after:avoid;}
+    .table-scroll{overflow:visible;}
+    table{min-width:0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="lang"><span class="on">简体中文</span><a href="./en.html" hreflang="en">English</a></div>
+  <h1>Crazy Brick（狂野砖块）隐私政策</h1>
+  <div class="meta">
+    <span>版本 v1.0</span>
+    <span>更新日期：2026 年 11 月 12 日</span>
+    <span>生效日期：2026 年 11 月 12 日</span>
+    <span>适用：Android 版 / 网页版</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <p>目录</p>
+  <ol>
+    <li><a href="#s1">本政策的适用范围</a></li>
+    <li><a href="#s2">我们收集的信息</a></li>
+    <li><a href="#s3">设备权限说明</a></li>
+    <li><a href="#s4">第三方 SDK 与共享清单</a></li>
+    <li><a href="#s5">我们如何使用信息</a></li>
+    <li><a href="#s6">信息的存储与跨境传输</a></li>
+    <li><a href="#s7">信息的共享、转让与披露</a></li>
+    <li><a href="#s8">信息安全</a></li>
+    <li><a href="#s9">您的权利</a></li>
+    <li><a href="#s10">未成年人保护</a></li>
+    <li><a href="#s11">广告、同意管理（UMP）与退出方式</a></li>
+    <li><a href="#s12">本地存储与同类技术</a></li>
+    <li><a href="#s13">本政策的更新</a></li>
+    <li><a href="#s14">联系我们</a></li>
+  </ol>
+</nav>
+
+<h2 style="border-top:none;padding-top:8px;">导言</h2>
+<p><strong>Crazy Brick</strong>（中文名「狂野砖块」，以下简称「本应用」）是一款打砖块游戏：滑动挡板发射小球，发射后自动瞄准地图底部的缺口，小球钻进内部后把整面砖墙从里向外融化；道具以分裂小球为主，同屏最多 350 颗球，主线 120 关，另有无尽模式。本应用由开发者 <strong>Marvin</strong>（以下简称「我们」）独立开发与运营，目前以 <strong>Android 应用</strong>（经 Google Play 分发）和<strong>网页版</strong>（经 itch.io 等平台在浏览器中运行）两种形式向您提供，支持简体中文与英文。</p>
+<p>我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。本政策向您说明：我们收集哪些信息、为什么收集、如何使用与保存、与谁共享，以及您对这些信息拥有哪些权利。我们遵循<strong>权责一致、目的明确、选择同意、最小必要、确保安全、主体参与、公开透明</strong>的原则处理您的个人信息。</p>
+
+<div class="note">
+  <strong>三句话了解本政策</strong>
+  ① 本应用<strong>无需注册账号</strong>即可开始游戏，关卡进度、星级与设置只保存在您的设备上；<br>
+  ② 我们<strong>不申请定位、通讯录、相机、麦克风、短信、通话记录</strong>等权限，不收集精确地理位置与生物识别信息；<br>
+  ③ Android 版接入 <strong>Google AdMob 激励视频广告</strong>（当前仅用于失败后「观看广告复活」），无内购、无第三方统计分析；<strong>网页版没有任何广告</strong>。
+</div>
+
+<p>请您在使用本应用前仔细阅读并充分理解本政策。您开始使用本应用，即表示您已阅读并同意本政策；其中涉及敏感个人信息或需单独同意的条款，我们会以醒目方式提示，并在获得您的明示同意后再行处理。</p>
+
+<h2 id="s1">1. 本政策的适用范围</h2>
+<p><strong>1.1 适用产品</strong>：本政策适用于「Crazy Brick（狂野砖块）」的 Android 版本（通过 Google Play 分发）以及网页版本（通过 itch.io 等平台在浏览器中运行）。不同渠道版本的功能存在差异：广告能力<strong>仅在 Android 版提供</strong>，网页版完全离线可玩、不含广告；具体以您实际使用的版本为准。</p>
+<p><strong>1.2 不适用范围</strong>：网页版依托的分发平台（如 itch.io）以及 Android 版的系统与商店服务（如 Google Play）自身可能使用 Cookie、设备标识与统计技术，其信息处理行为适用该等平台自身的隐私政策，<strong>不适用本政策</strong>。本应用内展示的第三方广告及跳转的第三方页面，由相应服务商独立提供并独立承担个人信息保护责任。我们建议您在向第三方提交任何信息前先行阅读其隐私政策。</p>
+<p><strong>1.3 个人信息处理者</strong>：开发者 Marvin（个人开发者），联系方式见第 14 条。</p>
+
+<h2 id="s2">2. 我们收集的信息</h2>
+<p>我们仅收集为实现具体功能所必需的信息。若您不提供某项非必需信息，不会影响您使用本应用的核心玩法。</p>
+
+<h3>2.1 您主动提供的信息</h3>
+<ul>
+  <li><strong>联系与反馈信息</strong>：当您通过邮件与我们联系时，我们会收到您的邮箱地址及您主动填写的沟通内容，仅用于答复您的问题。除此之外，本应用<strong>不设置任何信息填写入口</strong>。</li>
+</ul>
+
+<h3>2.2 我们自动收集的信息</h3>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>信息类别</th><th>具体内容</th><th>收集目的</th><th>是否必需</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>广告相关设备信息<br><span class="muted">（仅 Android 版）</span></td>
+      <td>广告标识符（AAID）、设备品牌与型号、操作系统及版本、屏幕分辨率、系统语言、IP 地址及基于 IP 的粗略位置（通常为城市级）</td>
+      <td>由 Google AdMob 用于展示激励视频广告、控制频次与防止作弊</td>
+      <td>观看广告复活时必需；可在系统设置中重置或删除广告 ID</td>
+    </tr>
+    <tr>
+      <td>广告展示与互动记录<br><span class="muted">（仅 Android 版）</span></td>
+      <td>激励视频的展示、完整观看与中途关闭</td>
+      <td>确认观看完成后发放「复活」奖励、控制广告频次</td>
+      <td>观看广告复活时必需</td>
+    </tr>
+    <tr>
+      <td>CDN 请求日志<br><span class="muted">（由 CDN 提供方记录）</span></td>
+      <td>启动时请求远程配置与资源更新时的 IP 地址、请求时间、User-Agent</td>
+      <td>版本与参数下发、内容热更新；我们不在自己的服务器接收或保存这些日志</td>
+      <td>联网时由 CDN 自动记录</td>
+    </tr>
+    <tr>
+      <td>游戏数据</td>
+      <td>主线关卡进度与星级、无尽模式波次记录、主题与语言选择、音效与球间碰撞开关等设置</td>
+      <td>提供存档、恢复进度、记住您的偏好</td>
+      <td>必需；仅保存在您的设备上，不上传</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.3 我们不会收集的信息</h3>
+<div class="note">
+  <strong>我们承诺不收集以下信息：</strong>
+  精确地理位置（本应用<strong>未申请</strong>定位权限）、通讯录、短信与通话记录、相册与文件内容、麦克风录音、摄像头画面、人脸、指纹、声纹等生物识别信息、身份证件号码、银行卡与支付账户信息。
+</div>
+<p>若未来因功能需要确需处理上述信息，我们会另行告知处理目的、方式与范围，并依法取得您的<strong>单独同意</strong>；在此之前不会开始处理。</p>
+
+<h2 id="s3">3. 设备权限说明</h2>
+<p>本应用仅在实现对应功能时申请必要权限，Android 版本申请的全部权限如下：</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>权限</th><th>用途</th><th>拒绝的后果</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>网络访问（INTERNET）</td><td>加载远程配置与内容热更新、请求激励视频广告（仅 Android 版）</td><td>无法获取配置更新与观看广告复活；<strong>游戏本身可离线游玩</strong>，使用内置默认配置</td></tr>
+    <tr><td>查看网络状态（ACCESS_NETWORK_STATE）</td><td>判断网络可用性，避免无效请求</td><td>不影响核心玩法</td></tr>
+    <tr><td>广告标识符（AD_ID）</td><td>供 AdMob 获取广告标识符，用于广告频次控制与防作弊</td><td>广告功能受限，不影响核心玩法</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">本应用<strong>未申请</strong>定位、相机、麦克风、通讯录、短信、通话记录及读取手机状态等权限。您可随时在手机「设置—应用—Crazy Brick—权限」中查看与管理授权。网页版不直接申请上述设备权限，也不加载任何广告脚本。</p>
+
+<h2 id="s4">4. 第三方 SDK 与共享清单</h2>
+<p>为实现广告展示与配置分发，本应用接入了下列第三方服务。我们已对合作方进行安全评估，并通过协议要求其仅在约定目的与范围内处理信息、采取同等水平的保护措施，不得将信息用于其他用途。</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>服务 / SDK</th><th>提供方</th><th>使用目的</th><th>收集的信息类型</th><th>隐私政策</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google AdMob（仅 Android）</td>
+      <td>Google LLC</td>
+      <td>展示激励视频广告（失败后「观看广告复活」）</td>
+      <td>广告标识符（AAID）、IP 地址及基于 IP 的粗略位置、设备与操作系统信息、广告展示与互动记录</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google UMP 同意管理（仅 Android）</td>
+      <td>Google LLC</td>
+      <td>在欧洲经济区 / 英国首次启动时展示广告同意表单，由您决定是否接受个性化广告</td>
+      <td>同意状态存储与必要的技术参数（由 Google 处理）</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>jsDelivr（配置与资源分发）</td>
+      <td>jsDelivr</td>
+      <td>远程配置下发与内容热更新</td>
+      <td>常规请求日志（IP 地址、时间、User-Agent）；请求不携带账号、存档或设备标识符</td>
+      <td><a href="https://www.jsdelivr.com/terms/privacy-policy" target="_blank" rel="noopener">jsdelivr.com/terms/privacy-policy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="muted">上述 SDK 的隐私政策以其官网公布的最新版本为准；我们会随 SDK 版本更新同步更新本清单。分发平台（itch.io、Google Play）自身的账号、支付与日志行为由各平台政策管辖，我们不接触您的支付信息。</p>
+
+<h3>4.1 其他共享情形</h3>
+<p>除上述服务商外，我们不会主动向任何第三方共享、转让您的个人信息，也不会出售您的个人信息。仅在下列情形下我们可能共享必要信息：</p>
+<ul>
+  <li>已事先获得您的<strong>明示同意</strong>；</li>
+  <li>根据法律法规、司法或行政机关的强制性要求；</li>
+  <li>为维护您或他人的生命、财产等重大合法权益且难以取得本人同意；</li>
+  <li>因合并、收购、资产转让等交易需要转移信息时，我们会告知您接收方信息，并要求其继续受本政策约束。</li>
+</ul>
+
+<h2 id="s5">5. 我们如何使用信息</h2>
+<p>我们仅在下列目的范围内使用您的信息，超出范围使用时会再次征得您的同意：</p>
+<ul>
+  <li><strong>提供核心功能</strong>：保存与恢复关卡进度、星级、无尽模式记录与设置；</li>
+  <li><strong>配置与内容更新</strong>：从 CDN 获取远程配置与热更新资源，调整关卡参数与修复问题；</li>
+  <li><strong>广告与奖励发放</strong>：展示激励视频，确认完整观看后发放「复活」奖励并控制展示频次（仅 Android 版）；</li>
+  <li><strong>改进产品</strong>：结合远程配置灰度调整难度与平衡（不依赖用户级统计数据）；</li>
+  <li><strong>客户服务</strong>：答复您的咨询、投诉与权利请求；</li>
+  <li><strong>履行法定义务</strong>：配合监管检查、响应司法与行政机关的合法要求。</li>
+</ul>
+<p>我们<strong>不会</strong>将您的个人信息用于：与上述目的无关的用途；通过自动化决策方式向您推送产生法律效力的信息；出售或出租给任何第三方。</p>
+
+<h2 id="s6">6. 信息的存储与跨境传输</h2>
+<h3>6.1 存储方式</h3>
+<p>您的游戏进度与设置以本地存储形式保存在您的设备中（网页版为浏览器本地存储，Android 版为应用私有目录），<strong>不上传至我们的服务器</strong>。本应用未接入任何第三方统计分析服务，不存在运营统计数据库。广告相关数据存储于 Google（AdMob）的服务器。</p>
+
+<h3>6.2 存储期限</h3>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>信息类型</th><th>存储期限</th></tr></thead>
+  <tbody>
+    <tr><td>本地游戏存档与设置</td><td>保存至您卸载本应用或清除应用数据 / 浏览器数据时，届时自动删除</td></tr>
+    <tr><td>广告数据</td><td>由 Google 按其隐私政策规定的期限保存</td></tr>
+    <tr><td>CDN 请求日志</td><td>由 jsDelivr 按其自身政策保存</td></tr>
+    <tr><td>客服沟通记录</td><td>问题处理完毕后 12 个月内删除</td></tr>
+  </tbody>
+</table>
+</div>
+<p>法律法规对保存期限另有规定的，从其规定。</p>
+
+<h3>6.3 存储地域与跨境传输</h3>
+<p><strong>需要特别说明的是：</strong>本应用接入的 Google AdMob 与 UMP 由境外主体提供。为实现广告展示与同意管理，相关广告标识符、IP 地址与广告交互数据可能被传输至<strong>境外</strong>（包括美国等国家和地区）并由该等主体处理。此类传输基于服务提供的必要性，我们会要求境外接收方遵守不低于本政策及所在地法律要求的保护标准。</p>
+<p>除上述情形外，我们不会向境外提供您的个人信息。若未来新增跨境处理场景，我们将依法履行告知义务、开展个人信息保护影响评估，并取得您的<strong>单独同意</strong>。</p>
+
+<h3>6.4 服务终止时的处理</h3>
+<p>若本应用停止运营，我们将提前通过应用内公告、商店页面等方式通知您，并在合理期限内删除或匿名化处理您的个人信息，法律法规另有规定的除外。</p>
+
+<h2 id="s7">7. 信息的共享、转让与披露</h2>
+<p>我们不会出售您的个人信息。共享与委托处理的具体清单见第 4 条。此外，根据法律法规及国家标准，以下情形中我们可能依法共享、转让或公开披露个人信息，且无需事先征得您的同意：</p>
+<ul>
+  <li>与国家安全、国防安全直接相关的；</li>
+  <li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
+  <li>与犯罪侦查、起诉、审判和判决执行等直接相关的；</li>
+  <li>出于维护您或其他个人的生命、财产等重大合法权益，但很难得到本人同意的；</li>
+  <li>您自行向社会公众公开的个人信息；</li>
+  <li>从合法公开披露的信息中收集的个人信息，如合法的新闻报道、政府信息公开等渠道。</li>
+</ul>
+
+<h2 id="s8">8. 信息安全</h2>
+<p>我们采取符合行业标准的安全措施保护您的信息：</p>
+<ul>
+  <li>网络传输采用 <strong>HTTPS / TLS</strong> 加密，防止配置与资源在传输过程中被窃取或篡改；</li>
+  <li>遵循<strong>最小必要</strong>原则：不设账号体系、不接统计服务、无自建服务器，最大限度减少数据留存；</li>
+  <li>仅使用官方渠道发布、及时更新的 SDK 版本，定期开展安全自查。</li>
+</ul>
+<p>尽管我们已采取上述措施，但请您理解：互联网环境并非绝对安全，因技术限制与可能存在的恶意攻击，我们无法始终保证信息百分之百的安全。若不幸发生个人信息安全事件，我们将按法律法规要求及时启动应急预案、采取补救措施，并以推送通知或公告等方式告知您事件情况、可能的影响及您可采取的防范建议，同时按规定向监管部门报告。</p>
+
+<h2 id="s9">9. 您的权利</h2>
+<p>依据《中华人民共和国个人信息保护法》等法律法规，您对自己的个人信息享有以下权利：</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>权利</th><th>如何行使</th></tr></thead>
+  <tbody>
+    <tr><td>查阅、复制</td><td>本地存档即为您可见的全部游戏数据；广告相关数据可通过第 14 条邮箱向 Google 或我们提出申请</td></tr>
+    <tr><td>更正、补充</td><td>主题、语言、音效等设置可在应用内直接修改</td></tr>
+    <tr><td>删除</td><td>游戏内「重置进度」可清空存档；卸载应用或清除应用数据 / 浏览器数据即可删除本地全部数据；广告 ID 可在系统设置中删除</td></tr>
+    <tr><td>撤回同意</td><td>在系统设置中删除广告 ID 或关闭广告个性化（见第 11 条）；卸载应用即视为终止使用</td></tr>
+    <tr><td>注销 / 删除账号</td><td>本应用<strong>无需注册账号</strong>，不存在账号体系；删除本地存档即完成数据清除</td></tr>
+    <tr><td>限制或拒绝处理</td><td>拒绝广告同意表单（EEA / UK）后，我们与 Google 不再基于您的标识符进行个性化广告投放；断网游玩则完全不产生广告请求</td></tr>
+    <tr><td>投诉举报</td><td>通过第 14 条邮箱投诉；也可向网信部门（12377）、工业和信息化部门（12321 / 12300）等监管机构举报</td></tr>
+  </tbody>
+</table>
+</div>
+<p>我们将在收到您的请求并完成身份核验后 <strong>15 个工作日</strong>内予以答复。对于合理的请求，我们不收取费用；对于重复、超出合理限度或需要过多技术手段的请求，我们可能予以拒绝并说明理由。</p>
+
+<h2 id="s10">10. 未成年人保护</h2>
+<p>本应用为休闲益智类游戏，内容适合各年龄段用户，但我们<strong>不主动面向不满十四周岁的儿童</strong>收集个人信息。</p>
+<ul>
+  <li>若您是不满十四周岁的儿童，请在父母或其他监护人的陪同下阅读本政策，并在取得监护人同意后使用本应用；</li>
+  <li>若您是不满十八周岁的未成年人，建议在监护人指导下使用，并请监护人帮助您理解本政策；</li>
+  <li>对于确认为儿童的个人信息，我们仅在获得监护人<strong>单独同意</strong>后处理，并采取更严格的保护措施；</li>
+  <li>若监护人发现我们在未获同意的情况下收集了儿童个人信息，可通过第 14 条邮箱联系我们，我们将在核实后尽快删除。</li>
+</ul>
+
+<h2 id="s11">11. 广告、同意管理（UMP）与退出方式</h2>
+<p>Android 版当前仅通过 Google AdMob 展示<strong>激励视频广告</strong>，且唯一用途是失败后「观看广告复活」——您完全可以不看广告直接重开本关，游戏没有任何仅凭广告解锁的功能。<strong>网页版不包含任何广告。</strong></p>
+<h3>11.1 欧洲经济区 / 英国用户的同意管理</h3>
+<p>Android 版在 EEA / 英国地区首次启动时会显示 Google 提供的同意表单（UMP），您可以自行选择：</p>
+<ul>
+  <li><strong>接受个性化广告</strong>：广告基于广告标识符与粗略位置投放，相关性更高；</li>
+  <li><strong>仅接受非个性化广告</strong>：仍可观看激励视频完成复活，但广告与您的关联性降低；</li>
+  <li><strong>拒绝全部</strong>：将无法使用「观看广告复活」，不影响其他任何功能。</li>
+</ul>
+<p>您之后可在系统设置中随时重新调出该表单修改选择。</p>
+<h3>11.2 关闭个性化广告的方式</h3>
+<ul>
+  <li><strong>Android</strong>：设置 → Google → 广告 → 「删除广告 ID」或「停用广告个性化」；</li>
+  <li><strong>彻底不产生广告请求</strong>：断开网络游玩（游戏完全离线可玩），或直接不使用「观看广告复活」。</li>
+</ul>
+<p>关闭个性化广告后，您仍可能看到非个性化广告，展示频次可能增加；关闭操作不影响「复活」以外的任何功能。</p>
+
+<h2 id="s12">12. 本地存储与同类技术</h2>
+<p>本应用不使用浏览器 Cookie 进行跨站跟踪。为保存进度与提升加载速度，我们会在您的设备上使用本地存储技术，包括：</p>
+<ul>
+  <li><strong>本地存档</strong>：主线关卡进度与星级、无尽模式波次记录、主题与语言选择、音效与球间碰撞开关等设置；</li>
+  <li><strong>缓存</strong>：远程配置与热更新资源的缓存，减少重复下载（断网时直接使用已缓存或内置内容）。</li>
+</ul>
+<p>您可以通过清除应用数据或浏览器数据删除上述本地信息。删除后，游戏进度将无法恢复。</p>
+
+<h2 id="s13">13. 本政策的更新</h2>
+<p>我们可能因功能调整、法律法规或监管要求变化而更新本政策。特别说明：当前版本无内购、无第三方统计、广告仅激励视频；若未来版本<strong>新增广告位（插屏 / 开屏）、内购、账号或匿名统计</strong>，本政策会在该版本发布前更新，并在商店页面注明。更新时，我们会在本页面发布新版本并标注更新日期与生效日期；涉及处理目的、方式或信息类型重大变化的，我们会以显著方式提示，必要时重新征得您的同意。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>版本</th><th>日期</th><th>主要变更</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>v1.0</td><td>2026-11-12</td>
+      <td>首次发布</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>若您不同意更新后的政策，请停止使用本应用并卸载；您继续使用即表示接受更新后的政策。</p>
+
+<h2 id="s14">14. 联系我们</h2>
+<p>如您对本政策有任何疑问、意见或投诉，或希望行使上述个人信息权利，请通过以下方式联系我们：</p>
+<ul>
+  <li><strong>个人信息处理者</strong>：Marvin（Crazy Brick / 狂野砖块 开发者）</li>
+  <li><strong>电子邮箱</strong>：<a href="mailto:wuyou517@gmail.com">wuyou517@gmail.com</a></li>
+  <li><strong>响应时限</strong>：收到并核验您的请求后 15 个工作日内答复</li>
+</ul>
+<p>若您对我们的答复不满意，或认为我们的个人信息处理行为损害了您的合法权益，您可以向网信、电信、公安、市场监管等主管部门投诉举报，也可以向有管辖权的人民法院提起诉讼。</p>
+
+<footer>
+  <p>Crazy Brick（狂野砖块）隐私政策 · v1.0 · 2026 年 11 月 12 日生效</p>
+  <p>本页面为最新版本，历史版本可通过仓库提交记录查阅。<a href="./en.html">English version</a></p>
+</footer>
+
+</div>
+</body>
+</html>

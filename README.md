@@ -5,6 +5,8 @@
 | 应用 | 路径 | 地址 |
 |---|---|---|
 | 主页（个人介绍） | `index.html` | https://marvin517.github.io/PrivacyPolicy/ |
+| Crazy Brick（狂野砖块） | `crazybrick/` | https://marvin517.github.io/PrivacyPolicy/crazybrick/ |
+| Crazy Brick（English） | `crazybrick/en.html` | https://marvin517.github.io/PrivacyPolicy/crazybrick/en.html |
 | Arrow Escape | `arrowescape/` | https://marvin517.github.io/PrivacyPolicy/arrowescape/ |
 | Arrow Escape（English） | `arrowescape/en.html` | https://marvin517.github.io/PrivacyPolicy/arrowescape/en.html |
 | Line Go（一线牵） | `linego/` | https://marvin517.github.io/PrivacyPolicy/linego/ |
